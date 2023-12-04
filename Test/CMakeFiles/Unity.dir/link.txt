@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libUnity.so -o lib/libUnity.so CMakeFiles/Unity.dir/Unity/unity.c.o 

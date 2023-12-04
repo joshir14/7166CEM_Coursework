@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libTestApplication.so -o lib/libTestApplication.so CMakeFiles/TestApplication.dir/Test/TestApplication.c.o 

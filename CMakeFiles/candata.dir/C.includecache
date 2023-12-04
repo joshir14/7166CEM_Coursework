@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/Desktop/7166CEM/Src/candata.c
+string.h
+-
+candata.h
+/home/pi/Desktop/7166CEM/Src/candata.h
+
+Include/candata.h
+stdint.h
+-
+stdbool.h
+-
+stddef.h
+-
+

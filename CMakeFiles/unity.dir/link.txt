@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libunity.so -o lib/libunity.so CMakeFiles/unity.dir/Test/unity.c.o 
