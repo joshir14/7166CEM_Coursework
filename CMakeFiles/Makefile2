@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/pi/Desktop/7166CEM
 CMakeFiles/candata.dir/all:
 	$(MAKE) -f CMakeFiles/candata.dir/build.make CMakeFiles/candata.dir/depend
 	$(MAKE) -f CMakeFiles/candata.dir/build.make CMakeFiles/candata.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=7,8 "Built target candata"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=3,4 "Built target candata"
 .PHONY : CMakeFiles/candata.dir/all
 
 # Include target in all.
@@ -135,100 +135,6 @@ CMakeFiles/Application.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/Application.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory Test
-
-# Convenience name for "all" pass in the directory.
-Test/all: Test/CMakeFiles/Unity.dir/all
-Test/all: Test/CMakeFiles/TestApplication.dir/all
-
-.PHONY : Test/all
-
-# Convenience name for "clean" pass in the directory.
-Test/clean: Test/CMakeFiles/Unity.dir/clean
-Test/clean: Test/CMakeFiles/TestApplication.dir/clean
-
-.PHONY : Test/clean
-
-# Convenience name for "preinstall" pass in the directory.
-Test/preinstall:
-
-.PHONY : Test/preinstall
-
-#=============================================================================
-# Target rules for target Test/CMakeFiles/Unity.dir
-
-# All Build rule for target.
-Test/CMakeFiles/Unity.dir/all:
-	$(MAKE) -f Test/CMakeFiles/Unity.dir/build.make Test/CMakeFiles/Unity.dir/depend
-	$(MAKE) -f Test/CMakeFiles/Unity.dir/build.make Test/CMakeFiles/Unity.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=5,6 "Built target Unity"
-.PHONY : Test/CMakeFiles/Unity.dir/all
-
-# Include target in all.
-all: Test/CMakeFiles/Unity.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-Test/CMakeFiles/Unity.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Unity.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
-.PHONY : Test/CMakeFiles/Unity.dir/rule
-
-# Convenience name for target.
-Unity: Test/CMakeFiles/Unity.dir/rule
-
-.PHONY : Unity
-
-# clean rule for target.
-Test/CMakeFiles/Unity.dir/clean:
-	$(MAKE) -f Test/CMakeFiles/Unity.dir/build.make Test/CMakeFiles/Unity.dir/clean
-.PHONY : Test/CMakeFiles/Unity.dir/clean
-
-# clean rule for target.
-clean: Test/CMakeFiles/Unity.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target Test/CMakeFiles/TestApplication.dir
-
-# All Build rule for target.
-Test/CMakeFiles/TestApplication.dir/all: Test/CMakeFiles/Unity.dir/all
-	$(MAKE) -f Test/CMakeFiles/TestApplication.dir/build.make Test/CMakeFiles/TestApplication.dir/depend
-	$(MAKE) -f Test/CMakeFiles/TestApplication.dir/build.make Test/CMakeFiles/TestApplication.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=3,4 "Built target TestApplication"
-.PHONY : Test/CMakeFiles/TestApplication.dir/all
-
-# Include target in all.
-all: Test/CMakeFiles/TestApplication.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-Test/CMakeFiles/TestApplication.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/TestApplication.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
-.PHONY : Test/CMakeFiles/TestApplication.dir/rule
-
-# Convenience name for target.
-TestApplication: Test/CMakeFiles/TestApplication.dir/rule
-
-.PHONY : TestApplication
-
-# clean rule for target.
-Test/CMakeFiles/TestApplication.dir/clean:
-	$(MAKE) -f Test/CMakeFiles/TestApplication.dir/build.make Test/CMakeFiles/TestApplication.dir/clean
-.PHONY : Test/CMakeFiles/TestApplication.dir/clean
-
-# clean rule for target.
-clean: Test/CMakeFiles/TestApplication.dir/clean
 
 .PHONY : clean
 

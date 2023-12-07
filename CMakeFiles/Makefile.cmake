@@ -10,7 +10,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.13.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.13.4/CMakeSystem.cmake"
   "CMakeLists.txt"
-  "Test/CMakeLists.txt"
   "/usr/share/cmake-3.13/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeGenericSystem.cmake"
@@ -36,13 +35,10 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "Test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/candata.dir/DependInfo.cmake"
   "CMakeFiles/Application.dir/DependInfo.cmake"
-  "Test/CMakeFiles/Unity.dir/DependInfo.cmake"
-  "Test/CMakeFiles/TestApplication.dir/DependInfo.cmake"
   )

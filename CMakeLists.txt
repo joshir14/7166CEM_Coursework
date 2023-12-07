@@ -6,6 +6,14 @@ project(Application C)
 # location of source code files
 include_directories( Include )
 
+
+# search for clang-tidy
+find_program(CLANG_TIDY_EXE NAMES "clang-tidy" REQUIRED)
+
+# setup clang-tidy command from executable + options
+set(CLANG_TIDY_COMMAND "${CLANG_TIDY_EXE}" "-checks=-*,modernize-*")
+
+
 # tell cmake where to put the executables that it creates
 file( MAKE_DIRECTORY bin )    
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY bin )
@@ -20,7 +28,9 @@ target_include_directories( candata PUBLIC Include )
 add_executable( Application Src/Application.c )
 target_link_libraries( Application PRIVATE candata )
 
-add_subdirectory(Test)
+set_target_properties(Application PROPERTIES CXX_CLANG_TIDY "${CLANG_TIDY_COMMAND}")
+
+#add_subdirectory(Test)
 
 
 

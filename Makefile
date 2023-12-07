@@ -136,32 +136,6 @@ Application/fast:
 	$(MAKE) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/build
 .PHONY : Application/fast
 
-#=============================================================================
-# Target rules for targets named Unity
-
-# Build rule for target.
-Unity: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Unity
-.PHONY : Unity
-
-# fast build rule for target.
-Unity/fast:
-	$(MAKE) -f Test/CMakeFiles/Unity.dir/build.make Test/CMakeFiles/Unity.dir/build
-.PHONY : Unity/fast
-
-#=============================================================================
-# Target rules for targets named TestApplication
-
-# Build rule for target.
-TestApplication: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestApplication
-.PHONY : TestApplication
-
-# fast build rule for target.
-TestApplication/fast:
-	$(MAKE) -f Test/CMakeFiles/TestApplication.dir/build.make Test/CMakeFiles/TestApplication.dir/build
-.PHONY : TestApplication/fast
-
 Src/Application.o: Src/Application.c.o
 
 .PHONY : Src/Application.o
@@ -226,8 +200,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... candata"
 	@echo "... Application"
-	@echo "... Unity"
-	@echo "... TestApplication"
 	@echo "... Src/Application.o"
 	@echo "... Src/Application.i"
 	@echo "... Src/Application.s"

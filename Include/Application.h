@@ -110,7 +110,8 @@ float calculate_front_current(int tf, float v, uint16_t rf)
 	float cf;
 	if(v != 0)
 	{
-		cf = (tf/v) * (1 + (0.879 * 0.879 * (tf/100)) + (rf * (0.6729/100) * tf));
+		cf = ((0.6721*rf*tf*tf) + (0.879*0.879*tf*tf) + (100*tf));
+		cf = (cf) / (100*v);
 		if(cf > 30000)
 		{
 			cf = 30000;
@@ -130,9 +131,10 @@ float calculate_front_current(int tf, float v, uint16_t rf)
 float calculate_rear_current(int tr, float v, uint16_t rr)
 {
 	float cr;
-	if( v != 0.0f)
+	if( v != 0)
 	{
-		cr = (tr/v) * (1 + (0.879 * 0.879 * (tr/100)) + (rr * (0.6729/100) * tr));
+		cr = ((0.6721*rr*tr*tr) + (0.879*0.879*tr*tr) + (100*tr));
+		cr = (cr) / (100*v);
 		if(cr > 30000)
 		{
 			cr = 30000;
@@ -144,7 +146,7 @@ float calculate_rear_current(int tr, float v, uint16_t rr)
 	}
 	else
 	{
-		cr = 0.0f;
+		cr = 0;
 	}
 	return cr;
 }
