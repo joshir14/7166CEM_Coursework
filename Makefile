@@ -136,6 +136,19 @@ Application/fast:
 	$(MAKE) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/build
 .PHONY : Application/fast
 
+#=============================================================================
+# Target rules for targets named docs
+
+# Build rule for target.
+docs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 docs
+.PHONY : docs
+
+# fast build rule for target.
+docs/fast:
+	$(MAKE) -f Docs/CMakeFiles/docs.dir/build.make Docs/CMakeFiles/docs.dir/build
+.PHONY : docs/fast
+
 Src/Application.o: Src/Application.c.o
 
 .PHONY : Src/Application.o
@@ -200,6 +213,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... candata"
 	@echo "... Application"
+	@echo "... docs"
 	@echo "... Src/Application.o"
 	@echo "... Src/Application.i"
 	@echo "... Src/Application.s"

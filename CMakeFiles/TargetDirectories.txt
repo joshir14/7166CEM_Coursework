@@ -2,3 +2,6 @@
 /home/pi/Desktop/7166CEM/CMakeFiles/rebuild_cache.dir
 /home/pi/Desktop/7166CEM/CMakeFiles/candata.dir
 /home/pi/Desktop/7166CEM/CMakeFiles/Application.dir
+/home/pi/Desktop/7166CEM/Docs/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/7166CEM/Docs/CMakeFiles/docs.dir
+/home/pi/Desktop/7166CEM/Docs/CMakeFiles/edit_cache.dir

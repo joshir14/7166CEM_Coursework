@@ -7,9 +7,12 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "CMakeDoxyfile.in"
+  "CMakeDoxygenDefaults.cmake"
   "CMakeFiles/3.13.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.13.4/CMakeSystem.cmake"
   "CMakeLists.txt"
+  "Docs/CMakeLists.txt"
   "/usr/share/cmake-3.13/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeGenericSystem.cmake"
@@ -20,6 +23,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.13/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-3.13/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.13/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.13/Modules/FindDoxygen.cmake"
+  "/usr/share/cmake-3.13/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/share/cmake-3.13/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.13/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.13/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.13/Modules/Platform/Linux.cmake"
@@ -35,10 +41,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Docs/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/candata.dir/DependInfo.cmake"
   "CMakeFiles/Application.dir/DependInfo.cmake"
+  "Docs/CMakeFiles/docs.dir/DependInfo.cmake"
   )

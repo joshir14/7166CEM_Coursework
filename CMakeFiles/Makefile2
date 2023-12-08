@@ -139,6 +139,56 @@ clean: CMakeFiles/Application.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory Docs
+
+# Convenience name for "all" pass in the directory.
+Docs/all:
+
+.PHONY : Docs/all
+
+# Convenience name for "clean" pass in the directory.
+Docs/clean: Docs/CMakeFiles/docs.dir/clean
+
+.PHONY : Docs/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Docs/preinstall:
+
+.PHONY : Docs/preinstall
+
+#=============================================================================
+# Target rules for target Docs/CMakeFiles/docs.dir
+
+# All Build rule for target.
+Docs/CMakeFiles/docs.dir/all:
+	$(MAKE) -f Docs/CMakeFiles/docs.dir/build.make Docs/CMakeFiles/docs.dir/depend
+	$(MAKE) -f Docs/CMakeFiles/docs.dir/build.make Docs/CMakeFiles/docs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=5 "Built target docs"
+.PHONY : Docs/CMakeFiles/docs.dir/all
+
+# Build rule for subdir invocation for target.
+Docs/CMakeFiles/docs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 Docs/CMakeFiles/docs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
+.PHONY : Docs/CMakeFiles/docs.dir/rule
+
+# Convenience name for target.
+docs: Docs/CMakeFiles/docs.dir/rule
+
+.PHONY : docs
+
+# clean rule for target.
+Docs/CMakeFiles/docs.dir/clean:
+	$(MAKE) -f Docs/CMakeFiles/docs.dir/build.make Docs/CMakeFiles/docs.dir/clean
+.PHONY : Docs/CMakeFiles/docs.dir/clean
+
+# clean rule for target.
+clean: Docs/CMakeFiles/docs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

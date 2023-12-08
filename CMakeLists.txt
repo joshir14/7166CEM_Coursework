@@ -14,6 +14,12 @@ find_program(CLANG_TIDY_EXE NAMES "clang-tidy" REQUIRED)
 set(CLANG_TIDY_COMMAND "${CLANG_TIDY_EXE}" "-checks=-*,modernize-*")
 
 
+# Docs only available if this is the main app
+find_package(Doxygen)
+add_subdirectory(Docs)
+
+
+
 # tell cmake where to put the executables that it creates
 file( MAKE_DIRECTORY bin )    
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY bin )

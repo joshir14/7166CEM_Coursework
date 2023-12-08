@@ -76,7 +76,7 @@ int torque_limit_front(uint16_t fr_wheelSpeed, uint16_t fl_wheelSpeed, float fro
  *
  * @param[in] tf Maximum Front torque limit.
  * @param[in] v Battery Voltage received over CAN bus.
- * @param[in] rf Maximum RPM value between front right and front left wheel speed in RPM.
+ * @param[in] rf Maximum RPM value between front right and front left wheels.
  * 
  * @return Calculated front current.
  */
@@ -87,7 +87,7 @@ float calculate_front_current(int tf, float v, uint16_t rf);
  *
  * @param[in] tr Maximum Rear torque limit.
  * @param[in] v Battery Voltage received over CAN bus.
- * @param[in] rr Maximum RPM value between rear right and rear left wheel speed in RPM.
+ * @param[in] rr Maximum RPM value between rear right and rear left wheels.
  * 
  * @return Calculated rear current.
  */
