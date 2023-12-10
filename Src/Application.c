@@ -13,9 +13,11 @@ int main()
 	uint16_t fs, rs;
 	float frontCurrent, rearCurrent;
 	float steeringReq, rearTrq, frontTrq;
-
 	uint8_t currentDataBuffer[8];
 	int tf1, tr1;
+	count1 = 0; 
+	count2 = 0;
+	count3 = 0;
 	while(1)
 	{
 		status = can_read(socket_id,&frame);
@@ -25,24 +27,24 @@ int main()
 			{
 				count1 = count1 + 1;
 				vcu_battery_frame_process(frame, &batteryVoltage);
-				//printf("Battery voltage is %f\n", batteryVoltage);
+				printf("Battery voltage is %f\n", batteryVoltage);
 			}
 			else if((frame.can_id == 0x521) && (frame.can_dlc > 0))
 			{
 				count2 = count2 + 1;
 				ai_drive_request_frame_process(frame, &frontTrq, &rearTrq, &steeringReq);
-				//printf("Front torque is %f\n", frontTrq);
-				//printf("Rear torque is %f\n", rearTrq);
-				//printf("Steering request is %f\n", steeringReq);
+				printf("Front torque is %f\n", frontTrq);
+				printf("Rear torque is %f\n", rearTrq);
+				printf("Steering request is %f\n", steeringReq);
 			}
 			else if((frame.can_id == 0x525) && (frame.can_dlc > 0))
 			{
 				count3 = count3 + 1;
 				vcu_wheel_speed_frame_process(frame, &rr_wheelSpeed, &rl_wheelSpeed, &fr_wheelSpeed, &fl_wheelSpeed);
-				//printf("Front right wheel speed is %d\n", fr_wheelSpeed);
-				//printf("Front left wheel speed is %d\n", fl_wheelSpeed);
-				//printf("Rear right wheel speed is %d\n", rr_wheelSpeed);
-				//printf("Rear left wheel speed is %d\n", rl_wheelSpeed);
+				printf("Front right wheel speed is %d\n", fr_wheelSpeed);
+				printf("Front left wheel speed is %d\n", fl_wheelSpeed);
+				printf("Rear right wheel speed is %d\n", rr_wheelSpeed);
+				printf("Rear left wheel speed is %d\n", rl_wheelSpeed);
 			}
 			
 			if((count1 > 0) && (count2 > 0) && (count3 > 0))
@@ -51,8 +53,8 @@ int main()
 				rs = (rr_wheelSpeed > rl_wheelSpeed) ? (rr_wheelSpeed) : (rl_wheelSpeed);
 				tf1 = torque_limit_front(fr_wheelSpeed, fl_wheelSpeed, frontTrq, batteryVoltage);
 				tr1 = torque_limit_rear(rr_wheelSpeed, rl_wheelSpeed, rearTrq, batteryVoltage);
-				//printf("Front torque limit %d\n", tf1);
-				//printf("Rear torque limit %d\n", tr1);
+				printf("Front torque limit %d\n", tf1);
+				printf("Rear torque limit %d\n", tr1);
 				cf1 = calculate_front_current(tf1, batteryVoltage, fs);
 				cr1 = calculate_rear_current(tr1, batteryVoltage, rs);
 				printf("Front current %f\n", cf1);

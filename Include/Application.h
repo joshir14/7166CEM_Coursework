@@ -87,7 +87,7 @@ float calculate_front_current(int tf, float v, uint16_t rf);
  *
  * @param[in] tr Maximum Rear torque limit.
  * @param[in] v Battery Voltage received over CAN bus.
- * @param[in] rr Maximum RPM value between rear right and rear left wheels.
+ * @param[in] rr Maximum RPM value between rear right and rear left wheels.n  
  * 
  * @return Calculated rear current.
  */
@@ -155,6 +155,15 @@ int torque_limit_front(uint16_t fr_wheelSpeed, uint16_t fl_wheelSpeed, float fro
 {
 	int tf,tf1;
 	int x = (fr_wheelSpeed >= fl_wheelSpeed) ? fr_wheelSpeed:fl_wheelSpeed;
+	int multiplier;
+	if( frontTrq < 0)
+	{
+		multiplier = -1;
+	}
+	else
+	{
+		multiplier = 1;
+	}
 	if(batteryVoltage > 2.8)
 	{
 		if(x > 700)
@@ -186,7 +195,8 @@ int torque_limit_front(uint16_t fr_wheelSpeed, uint16_t fl_wheelSpeed, float fro
 	{
 		tf = 20;
 	}
-	tf1 = (tf <= (int)(frontTrq)) ? tf:(int)(frontTrq);
+	tf1 = (tf <= abs((int)(frontTrq))) ? tf:abs((int)(frontTrq));
+	tf1 = tf1*multiplier;
 	return tf1;
 }
 
@@ -194,6 +204,15 @@ int torque_limit_rear(uint16_t rr_wheelSpeed, uint16_t rl_wheelSpeed, float rear
 {
 	int tr,tr1;
 	int x = (rr_wheelSpeed >= rl_wheelSpeed) ? rr_wheelSpeed:rl_wheelSpeed;
+	int multiplier;
+	if(rearTrq < 0)
+	{
+		multiplier = -1;
+	}
+	else
+	{
+		multiplier = 1;
+	}
 	if(batteryVoltage > 2.8)
 	{
 		if(x > 700)
@@ -225,7 +244,8 @@ int torque_limit_rear(uint16_t rr_wheelSpeed, uint16_t rl_wheelSpeed, float rear
 	{
 		tr = 20;
 	}
-	tr1 = (tr <= (int)(rearTrq)) ? tr:(int)(rearTrq);
+	tr1 = (tr <= abs((int)(rearTrq))) ? tr:abs((int)(rearTrq));
+	tr1 = tr1*multiplier;
 	return tr1;
 }
 
