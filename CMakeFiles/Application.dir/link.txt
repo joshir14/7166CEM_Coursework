@@ -1,1 +1,1 @@
-/usr/bin/cc   -rdynamic CMakeFiles/Application.dir/Src/Application.c.o  -o bin/Application -Wl,-rpath,/home/pi/Desktop/7166CEM/lib lib/libcandata.so 
+/usr/bin/cc   -Wl,--export-dynamic -rdynamic CMakeFiles/Application.dir/Src/Application.c.o  -o bin/Application -Wl,-rpath,/home/pi/Desktop/7166CEM/lib lib/libcandata.so 

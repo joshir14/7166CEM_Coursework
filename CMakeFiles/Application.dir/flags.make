@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_FLAGS =  
 
-C_DEFINES = 
+C_DEFINES = -DApplication_EXPORTS
 
-C_INCLUDES = -I/home/pi/Desktop/7166CEM/Include 
+C_INCLUDES = -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM 
 

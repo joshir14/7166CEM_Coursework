@@ -1,1 +1,1 @@
-/usr/bin/cc -fPIC   -shared -Wl,-soname,libTestApplication.so -o lib/libTestApplication.so CMakeFiles/TestApplication.dir/TestApplication.c.o -Wl,-rpath,/home/pi/Desktop/7166CEM/Test/lib lib/libUnity.so 
+/usr/bin/cc   -rdynamic CMakeFiles/TestApplication.dir/TestApplication.c.o  -o bin/TestApplication lib/libUnity.a 

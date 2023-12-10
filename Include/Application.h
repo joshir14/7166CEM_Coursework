@@ -156,7 +156,10 @@ int torque_limit_front(uint16_t fr_wheelSpeed, uint16_t fl_wheelSpeed, float fro
 	int tf,tf1;
 	int x = (fr_wheelSpeed >= fl_wheelSpeed) ? fr_wheelSpeed:fl_wheelSpeed;
 	int multiplier;
-	if( frontTrq < 0)
+	int y;
+	y = (int)frontTrq;
+	
+	if(y < 0)
 	{
 		multiplier = -1;
 	}
@@ -164,6 +167,8 @@ int torque_limit_front(uint16_t fr_wheelSpeed, uint16_t fl_wheelSpeed, float fro
 	{
 		multiplier = 1;
 	}
+	y = abs(y);
+	
 	if(batteryVoltage > 2.8)
 	{
 		if(x > 700)
@@ -188,16 +193,16 @@ int torque_limit_front(uint16_t fr_wheelSpeed, uint16_t fl_wheelSpeed, float fro
 		}
 		else
 		{
-			tf = (int)(frontTrq);
+			tf = y;
 		}
 	}
 	else
 	{
 		tf = 20;
 	}
-	tf1 = (tf <= abs((int)(frontTrq))) ? tf:abs((int)(frontTrq));
-	tf1 = tf1*multiplier;
-	return tf1;
+	tf1 = (tf <= y) ? tf:y;
+
+	return (tf1*multiplier);
 }
 
 int torque_limit_rear(uint16_t rr_wheelSpeed, uint16_t rl_wheelSpeed, float rearTrq, float batteryVoltage)
@@ -205,7 +210,9 @@ int torque_limit_rear(uint16_t rr_wheelSpeed, uint16_t rl_wheelSpeed, float rear
 	int tr,tr1;
 	int x = (rr_wheelSpeed >= rl_wheelSpeed) ? rr_wheelSpeed:rl_wheelSpeed;
 	int multiplier;
-	if(rearTrq < 0)
+	int y;
+	y = (int)rearTrq;
+	if(y < 0)
 	{
 		multiplier = -1;
 	}
@@ -213,6 +220,7 @@ int torque_limit_rear(uint16_t rr_wheelSpeed, uint16_t rl_wheelSpeed, float rear
 	{
 		multiplier = 1;
 	}
+	y = abs(y);
 	if(batteryVoltage > 2.8)
 	{
 		if(x > 700)
@@ -237,16 +245,16 @@ int torque_limit_rear(uint16_t rr_wheelSpeed, uint16_t rl_wheelSpeed, float rear
 		}
 		else
 		{
-			tr = (int)(rearTrq);
+			tr = y;
 		}
 	}
 	else
 	{
 		tr = 20;
 	}
-	tr1 = (tr <= abs((int)(rearTrq))) ? tr:abs((int)(rearTrq));
-	tr1 = tr1*multiplier;
-	return tr1;
+	tr1 = (tr <= y) ? tr:y;
+
+	return (tr1*multiplier);
 }
 
 int process_motor_current_request(float frontCurrent, float rearCurrent, uint8_t* currentDataBuffer)

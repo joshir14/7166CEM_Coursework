@@ -78,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/pi/Desktop/7166CEM && $(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles /home/pi/Desktop/7166CEM/Test/CMakeFiles/progress.marks
@@ -125,48 +136,6 @@ Unity/fast:
 	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Unity.dir/build.make Test/CMakeFiles/Unity.dir/build
 .PHONY : Unity/fast
 
-# Convenience name for target.
-Test/CMakeFiles/TestApplication.dir/rule:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/TestApplication.dir/rule
-.PHONY : Test/CMakeFiles/TestApplication.dir/rule
-
-# Convenience name for target.
-TestApplication: Test/CMakeFiles/TestApplication.dir/rule
-
-.PHONY : TestApplication
-
-# fast build rule for target.
-TestApplication/fast:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/TestApplication.dir/build.make Test/CMakeFiles/TestApplication.dir/build
-.PHONY : TestApplication/fast
-
-TestApplication.o: TestApplication.c.o
-
-.PHONY : TestApplication.o
-
-# target to build an object file
-TestApplication.c.o:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/TestApplication.dir/build.make Test/CMakeFiles/TestApplication.dir/TestApplication.c.o
-.PHONY : TestApplication.c.o
-
-TestApplication.i: TestApplication.c.i
-
-.PHONY : TestApplication.i
-
-# target to preprocess a source file
-TestApplication.c.i:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/TestApplication.dir/build.make Test/CMakeFiles/TestApplication.dir/TestApplication.c.i
-.PHONY : TestApplication.c.i
-
-TestApplication.s: TestApplication.c.s
-
-.PHONY : TestApplication.s
-
-# target to generate assembly for a file
-TestApplication.c.s:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/TestApplication.dir/build.make Test/CMakeFiles/TestApplication.dir/TestApplication.c.s
-.PHONY : TestApplication.c.s
-
 Unity/unity.o: Unity/unity.c.o
 
 .PHONY : Unity/unity.o
@@ -203,10 +172,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Unity"
-	@echo "... TestApplication"
-	@echo "... TestApplication.o"
-	@echo "... TestApplication.i"
-	@echo "... TestApplication.s"
+	@echo "... test"
 	@echo "... Unity/unity.o"
 	@echo "... Unity/unity.i"
 	@echo "... Unity/unity.s"
