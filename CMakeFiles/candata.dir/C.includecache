@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/Desktop/7166CEM/Src/candata.c
+/home/pi/Desktop/7166CEM/Src_autogen/candata.c
 string.h
 -
 candata.h
-/home/pi/Desktop/7166CEM/Src/candata.h
+/home/pi/Desktop/7166CEM/Src_autogen/candata.h
 
-Include/candata.h
+/home/pi/Desktop/7166CEM/Src_autogen/candata.h
 stdint.h
 -
 stdbool.h

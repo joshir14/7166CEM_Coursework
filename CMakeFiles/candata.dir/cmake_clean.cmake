@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/candata.dir/Src/candata.c.o"
+  "Src_autogen/candata.h"
+  "Src_autogen/candata.c"
+  "CMakeFiles/candata.dir/Src_autogen/candata.c.o"
   "lib/libcandata.pdb"
   "lib/libcandata.so"
 )

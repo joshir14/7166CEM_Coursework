@@ -1,1 +1,1 @@
-/usr/bin/cc -fPIC   -shared -Wl,-soname,libcandata.so -o lib/libcandata.so CMakeFiles/candata.dir/Src/candata.c.o 
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libcandata.so -o lib/libcandata.so CMakeFiles/candata.dir/Src_autogen/candata.c.o 

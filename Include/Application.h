@@ -9,7 +9,7 @@
  * 
  * @return 0 or negative error code
  */
-int vcu_battery_frame_process(struct can_frame frame, float* batteryVoltage);
+int vcu_battery_frame_process(struct can_frame frame, float *batteryVoltage);
 
 /**
  * Processes AI_DRIVE_REQUESTS message and stores torque values.
@@ -21,7 +21,7 @@ int vcu_battery_frame_process(struct can_frame frame, float* batteryVoltage);
  * 
  * @return 0 or negative error code
  */
-int ai_drive_request_frame_process(struct can_frame frame, float* frontTrq, float* rearTrq, float* steeringReq);
+int ai_drive_request_frame_process(struct can_frame frame, float *frontTrq, float *rearTrq, float *steeringReq);
 
 /**
  * Processes VCU_WHEEL_SPEEDS message and stores wheel speed values.
@@ -34,7 +34,7 @@ int ai_drive_request_frame_process(struct can_frame frame, float* frontTrq, floa
  * 
  * @return 0 or negative error code
  */
-int vcu_wheel_speed_frame_process(struct can_frame frame, uint16_t* rr_wheelSpeed, uint16_t* rl_wheelSpeed, uint16_t* fr_wheelSpeed, uint16_t* fl_wheelSpeed);
+int vcu_wheel_speed_frame_process(struct can_frame frame, uint16_t *rr_wheelSpeed, uint16_t *rl_wheelSpeed, uint16_t *fr_wheelSpeed, uint16_t *fl_wheelSpeed);
 
 /**
  * Genrates data frame to be transmitted for MOTOR_CURRENT (0x320) frame.
@@ -45,7 +45,7 @@ int vcu_wheel_speed_frame_process(struct can_frame frame, uint16_t* rr_wheelSpee
  * 
  * @return Size of genrated data or negative error code.
  */
-int process_motor_current_request(float frontCurrent, float rearCurrent, uint8_t* currentDataBuffer);
+int process_motor_current_request(float frontCurrent, float rearCurrent, uint8_t *currentDataBuffer);
 
 /**
  * Calculate rear torque limit.
@@ -103,26 +103,21 @@ float calculate_rear_current(int tr, float v, uint16_t rr);
  * 
  * @return 1 if frame is generated, 0 if frame is not genrated.
  */
- uint8_t generate_can_frame(struct can_frame* frame, uint8_t *currentDataBuffer, uint16_t can_id, int dlc);
+uint8_t generate_can_frame(struct can_frame *frame, uint8_t *currentDataBuffer, uint16_t can_id, int dlc);
 
 float calculate_front_current(int tf, float v, uint16_t rf)
 {
 	float cf;
-	if(v != 0)
-	{
-		cf = ((0.6721*rf*tf*tf) + (0.879*0.879*tf*tf) + (100*tf));
-		cf = (cf) / (100*v);
-		if(cf > 30000)
-		{
+	if (v != 0) {
+		cf = ((0.6721 * rf * tf * tf) + (0.879 * 0.879 * tf * tf) + (100 * tf));
+		cf = (cf) / (100 * v);
+		if (cf > 30000) {
 			cf = 30000;
 		}
-		if(cf < -30000)
-		{
+		if (cf < -30000) {
 			cf = -30000;
 		}
-	}
-	else
-	{
+	} else {
 		cf = 0;
 	}
 	return cf;
@@ -131,21 +126,16 @@ float calculate_front_current(int tf, float v, uint16_t rf)
 float calculate_rear_current(int tr, float v, uint16_t rr)
 {
 	float cr;
-	if( v != 0)
-	{
-		cr = ((0.6721*rr*tr*tr) + (0.879*0.879*tr*tr) + (100*tr));
-		cr = (cr) / (100*v);
-		if(cr > 30000)
-		{
+	if (v != 0) {
+		cr = ((0.6721 * rr * tr * tr) + (0.879 * 0.879 * tr * tr) + (100 * tr));
+		cr = (cr) / (100 * v);
+		if (cr > 30000) {
 			cr = 30000;
 		}
-		if(cr < -30000)
-		{
+		if (cr < -30000) {
 			cr = -30000;
 		}
-	}
-	else
-	{
+	} else {
 		cr = 0;
 	}
 	return cr;
@@ -153,111 +143,77 @@ float calculate_rear_current(int tr, float v, uint16_t rr)
 
 int torque_limit_front(uint16_t fr_wheelSpeed, uint16_t fl_wheelSpeed, float frontTrq, float batteryVoltage)
 {
-	int tf,tf1;
-	int x = (fr_wheelSpeed >= fl_wheelSpeed) ? fr_wheelSpeed:fl_wheelSpeed;
+	int tf, tf1;
+	int x = (fr_wheelSpeed >= fl_wheelSpeed) ? fr_wheelSpeed : fl_wheelSpeed;
 	int multiplier;
 	int y;
 	y = (int)frontTrq;
-	
-	if(y < 0)
-	{
+
+	if (y < 0) {
 		multiplier = -1;
-	}
-	else
-	{
+	} else {
 		multiplier = 1;
 	}
 	y = abs(y);
-	
-	if(batteryVoltage > 2.8)
-	{
-		if(x > 700)
-		{
+
+	if (batteryVoltage > 2.8) {
+		if (x > 700) {
 			tf = 50;
-		}
-		else if((x > 600) && (x <= 700))
-		{
+		} else if ((x > 600) && (x <= 700)) {
 			tf = 85;
-		}
-		else if((x > 500) && (x <= 600))
-		{
+		} else if ((x > 500) && (x <= 600)) {
 			tf = 100;
-		}
-		else if((x > 400) && (x <= 500))
-		{
+		} else if ((x > 400) && (x <= 500)) {
 			tf = 120;
-		}
-		else if((x > 300) && (x <= 400))
-		{
+		} else if ((x > 300) && (x <= 400)) {
 			tf = 150;
-		}
-		else
-		{
+		} else {
 			tf = y;
 		}
-	}
-	else
-	{
+	} else {
 		tf = 20;
 	}
-	tf1 = (tf <= y) ? tf:y;
+	tf1 = (tf <= y) ? tf : y;
 
-	return (tf1*multiplier);
+	return (tf1 * multiplier);
 }
 
 int torque_limit_rear(uint16_t rr_wheelSpeed, uint16_t rl_wheelSpeed, float rearTrq, float batteryVoltage)
 {
-	int tr,tr1;
-	int x = (rr_wheelSpeed >= rl_wheelSpeed) ? rr_wheelSpeed:rl_wheelSpeed;
+	int tr, tr1;
+	int x = (rr_wheelSpeed >= rl_wheelSpeed) ? rr_wheelSpeed : rl_wheelSpeed;
 	int multiplier;
 	int y;
 	y = (int)rearTrq;
-	if(y < 0)
-	{
+	if (y < 0) {
 		multiplier = -1;
-	}
-	else
-	{
+	} else {
 		multiplier = 1;
 	}
 	y = abs(y);
-	if(batteryVoltage > 2.8)
-	{
-		if(x > 700)
-		{
+	if (batteryVoltage > 2.8) {
+		if (x > 700) {
 			tr = 50;
-		}
-		else if((x > 600) && (x <= 700))
-		{
+		} else if ((x > 600) && (x <= 700)) {
 			tr = 85;
-		}
-		else if((x > 500) && (x <= 600))
-		{
+		} else if ((x > 500) && (x <= 600)) {
 			tr = 100;
-		}
-		else if((x > 400) && (x <= 500))
-		{
+		} else if ((x > 400) && (x <= 500)) {
 			tr = 120;
-		}
-		else if((x > 300) && (x <= 400))
-		{
+		} else if ((x > 300) && (x <= 400)) {
 			tr = 150;
-		}
-		else
-		{
+		} else {
 			tr = y;
 		}
-	}
-	else
-	{
+	} else {
 		tr = 20;
 	}
-	tr1 = (tr <= y) ? tr:y;
+	tr1 = (tr <= y) ? tr : y;
 
-	return (tr1*multiplier);
+	return (tr1 * multiplier);
 }
 
-int process_motor_current_request(float frontCurrent, float rearCurrent, uint8_t* currentDataBuffer)
+int process_motor_current_request(float frontCurrent, float rearCurrent, uint8_t *currentDataBuffer)
 {
 	int dlc;
 	struct candata_motor_current_t currentData;
@@ -267,12 +223,11 @@ int process_motor_current_request(float frontCurrent, float rearCurrent, uint8_t
 	return dlc;
 }
 
-int ai_drive_request_frame_process(struct can_frame frame, float* frontTrq, float* rearTrq, float* steeringReq)
+int ai_drive_request_frame_process(struct can_frame frame, float *frontTrq, float *rearTrq, float *steeringReq)
 {
 	struct candata_ai_drive_request_t driveRequest;
 	int code = candata_ai_drive_request_unpack(&driveRequest, frame.data, frame.can_dlc);
-	if(code == 0)
-	{
+	if (code == 0) {
 		*frontTrq = candata_ai_drive_request_front_trq_request_decode(driveRequest.front_trq_request);
 		*rearTrq = candata_ai_drive_request_rear_trq_request_decode(driveRequest.rear_trq_request);
 		*steeringReq = candata_ai_drive_request_steering_request_decode(driveRequest.steering_request);
@@ -280,23 +235,21 @@ int ai_drive_request_frame_process(struct can_frame frame, float* frontTrq, floa
 	return code;
 }
 
-int vcu_battery_frame_process(struct can_frame frame, float* batteryVoltage)
+int vcu_battery_frame_process(struct can_frame frame, float *batteryVoltage)
 {
 	struct candata_vcu_battery_t VBATT;
 	int code = candata_vcu_battery_unpack(&VBATT, frame.data, frame.can_dlc);
-	if(code == 0)
-	{
+	if (code == 0) {
 		*batteryVoltage = candata_vcu_battery_voltage_decode(VBATT.voltage);
 	}
 	return code;
 }
 
-int vcu_wheel_speed_frame_process(struct can_frame frame, uint16_t* rr_wheelSpeed, uint16_t* rl_wheelSpeed, uint16_t* fr_wheelSpeed, uint16_t* fl_wheelSpeed)
+int vcu_wheel_speed_frame_process(struct can_frame frame, uint16_t *rr_wheelSpeed, uint16_t *rl_wheelSpeed, uint16_t *fr_wheelSpeed, uint16_t *fl_wheelSpeed)
 {
 	struct candata_vcu_wheel_speeds_t wheelSpeed;
 	int code = candata_vcu_wheel_speeds_unpack(&wheelSpeed, frame.data, frame.can_dlc);
-	if(code == 0)
-	{
+	if (code == 0) {
 		*rr_wheelSpeed = candata_vcu_wheel_speeds_rr_wheel_speed_decode(wheelSpeed.rr_wheel_speed);
 		*rl_wheelSpeed = candata_vcu_wheel_speeds_rl_wheel_speed_decode(wheelSpeed.rl_wheel_speed);
 		*fr_wheelSpeed = candata_vcu_wheel_speeds_fr_wheel_speed_decode(wheelSpeed.fr_wheel_speed);
@@ -305,20 +258,16 @@ int vcu_wheel_speed_frame_process(struct can_frame frame, uint16_t* rr_wheelSpee
 	return code;
 }
 
-uint8_t generate_can_frame(struct can_frame* frame, uint8_t *currentDataBuffer, uint16_t can_id, int dlc)
+uint8_t generate_can_frame(struct can_frame *frame, uint8_t *currentDataBuffer, uint16_t can_id, int dlc)
 {
 	frame->can_id = can_id;
 	frame->can_dlc = dlc;
-	if(dlc > 0)
-	{
-		for (int i = 0; i < dlc; i++)
-		{
+	if (dlc > 0) {
+		for (int i = 0; i < dlc; i++) {
 			frame->data[i] = currentDataBuffer[i];
 		}
 		return 1;
-	}
-	else
-	{
+	} else {
 		return 0;
 	}
 }

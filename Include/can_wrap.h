@@ -8,8 +8,8 @@
 
 #include <linux/can.h>
 #include <linux/can/raw.h>
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -26,30 +26,30 @@
  * @return -2 If could not enable CANFD.
  * @return -3 If could not bind socket.
  */
-const int can_connect( char* channel, const bool fd  )
+const int can_connect(char *channel, const bool fd)
 {
-    const int canSocket = socket( PF_CAN, SOCK_RAW, CAN_RAW );
-    if( canSocket < 0 )
-        return -1;
+	const int canSocket = socket(PF_CAN, SOCK_RAW, CAN_RAW);
+	if (canSocket < 0)
+		return -1;
 
-    struct ifreq ifr;
-    strncpy( ifr.ifr_name, channel, sizeof(ifr.ifr_name)-1 );
-    ioctl( canSocket, SIOCGIFINDEX, &ifr );
+	struct ifreq ifr;
+	strncpy(ifr.ifr_name, channel, sizeof(ifr.ifr_name) - 1);
+	ioctl(canSocket, SIOCGIFINDEX, &ifr);
 
-    struct sockaddr_can addr;
-    memset( &addr, 0, sizeof(addr) );
-    addr.can_family = AF_CAN;
-    addr.can_ifindex = ifr.ifr_ifindex;
+	struct sockaddr_can addr;
+	memset(&addr, 0, sizeof(addr));
+	addr.can_family = AF_CAN;
+	addr.can_ifindex = ifr.ifr_ifindex;
 
-    int enableCanFd = 1;
-    if( fd && setsockopt( canSocket, SOL_CAN_RAW, CAN_RAW_FD_FRAMES,
-            &enableCanFd, sizeof(enableCanFd) ) )
-        return -2;
+	int enableCanFd = 1;
+	if (fd && setsockopt(canSocket, SOL_CAN_RAW, CAN_RAW_FD_FRAMES,
+			     &enableCanFd, sizeof(enableCanFd)))
+		return -2;
 
-    if( bind( canSocket, (struct sockaddr*)&addr, sizeof(addr) ) < 0 )
-        return -3;
+	if (bind(canSocket, (struct sockaddr *)&addr, sizeof(addr)) < 0)
+		return -3;
 
-    return canSocket;
+	return canSocket;
 }
 
 /**
@@ -59,9 +59,9 @@ const int can_connect( char* channel, const bool fd  )
  *
  * @return false If socket close failed
  */
-bool can_close( const int socket )
+bool can_close(const int socket)
 {
-    return close( socket ) >= 0;
+	return close(socket) >= 0;
 }
 
 /**
@@ -72,9 +72,9 @@ bool can_close( const int socket )
  * @param frame CAN frame variable to place read data.
  * @return Success.
  */
-bool can_read( const int socket, struct can_frame* frame )
+bool can_read(const int socket, struct can_frame *frame)
 {
-    return read( socket, frame, sizeof(struct can_frame) ) >= 0;
+	return read(socket, frame, sizeof(struct can_frame)) >= 0;
 }
 
 /**
@@ -85,9 +85,9 @@ bool can_read( const int socket, struct can_frame* frame )
  * @param frame CAN frame variable to place read data.
  * @return Success.
  */
-bool can_readfd( const int socket, struct canfd_frame* frame )
+bool can_readfd(const int socket, struct canfd_frame *frame)
 {
-    return read( socket, frame, sizeof(struct canfd_frame) ) >= 0;
+	return read(socket, frame, sizeof(struct canfd_frame)) >= 0;
 }
 
 /**
@@ -97,9 +97,9 @@ bool can_readfd( const int socket, struct canfd_frame* frame )
  * @param frame CAN frame to be sent.
  * @return Success.
  */
-bool can_write( const int socket, struct can_frame* frame )
+bool can_write(const int socket, struct can_frame *frame)
 {
-    return write( socket, frame, sizeof(struct can_frame) ) == sizeof(struct can_frame);
+	return write(socket, frame, sizeof(struct can_frame)) == sizeof(struct can_frame);
 }
 
 /**
@@ -109,9 +109,9 @@ bool can_write( const int socket, struct can_frame* frame )
  * @param frame CANFD frame to be sent.
  * @return Success.
  */
-bool can_writefd( const int socket, struct canfd_frame* frame )
+bool can_writefd(const int socket, struct canfd_frame *frame)
 {
-    return write( socket, frame, sizeof(struct canfd_frame) ) == sizeof(struct canfd_frame);
+	return write(socket, frame, sizeof(struct canfd_frame)) == sizeof(struct canfd_frame);
 }
 
 #endif

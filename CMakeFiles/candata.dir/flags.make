@@ -6,5 +6,5 @@ C_FLAGS = -fPIC
 
 C_DEFINES = -Dcandata_EXPORTS
 
-C_INCLUDES = -I/home/pi/Desktop/7166CEM/Include 
+C_INCLUDES = -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen 
 

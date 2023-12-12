@@ -3,14 +3,26 @@ set(CMAKE_CXX_STANDARD 17)
 
 project(Application C)
 
+file( MAKE_DIRECTORY Src_autogen )  
+add_custom_command( OUTPUT Src_autogen/candata.h Src_autogen/candata.c
+        COMMAND python3 -m cantools generate_c_source candata.dbc -o Src_autogen
+        MAIN_DEPENDENCY candata.dbc
+        COMMENT "Autogenerate code from DBC file" )
+
 # location of source code files
 include_directories( Include )
 
 # search for clang-tidy
-find_program(CLANG_TIDY_EXE NAMES "clang-tidy" REQUIRED)
+#find_program(CLANG_TIDY_EXE NAMES "clang-tidy" REQUIRED)
 
 # setup clang-tidy command from executable + options
-set(CLANG_TIDY_COMMAND "${CLANG_TIDY_EXE}" "-checks=-*,modernize-*")
+#set(CLANG_TIDY_COMMAND "${CLANG_TIDY_EXE}" "-checks=-*,modernize-*")
+
+find_program(CMAKE_CXX_CLANG_TIDY NAMES clang-tidy)
+if(CMAKE_CXX_CLANG_TIDY)
+    list(APPEND CMAKE_CXX_CLANG_TIDY 
+        "-checks=*,-fuchsia-trailing-return,-modernize-use-trailing-return-type")
+endif()
 
 # Docs only available if this is the main app
 find_package(Doxygen)
@@ -24,16 +36,14 @@ set( CMAKE_RUNTIME_OUTPUT_DIRECTORY bin )
 file( MAKE_DIRECTORY lib )
 SET( LIBRARY_OUTPUT_PATH lib )
 
-add_library( candata SHARED Src/candata.c )
-target_include_directories( candata PUBLIC Include )
+add_library( candata SHARED Src_autogen/candata.c )
+target_include_directories( candata PUBLIC Src_autogen )
 
 add_executable( Application Src/Application.c )
-set_property(TARGET Application PROPERTY ENABLE_EXPORTS 1)
 target_link_libraries( Application PUBLIC candata )
 
-target_include_directories(Application PUBLIC ${CMAKE_CURRENT_LIST_DIR})
 
-set_target_properties(Application PROPERTIES CXX_CLANG_TIDY "${CLANG_TIDY_COMMAND}")
+
 
 include(CTest)
 add_subdirectory(Test)
