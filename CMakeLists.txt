@@ -11,6 +11,7 @@ add_custom_command( OUTPUT Src_autogen/candata.h Src_autogen/candata.c
 
 # location of source code files
 include_directories( Include )
+include_directories( Src_autogen )
 
 # search for clang-tidy
 #find_program(CLANG_TIDY_EXE NAMES "clang-tidy" REQUIRED)
@@ -28,6 +29,7 @@ endif()
 find_package(Doxygen)
 add_subdirectory(Docs)
 
+
 # tell cmake where to put the executables that it creates
 file( MAKE_DIRECTORY bin )    
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY bin )
@@ -42,12 +44,9 @@ target_include_directories( candata PUBLIC Src_autogen )
 add_executable( Application Src/Application.c )
 target_link_libraries( Application PUBLIC candata )
 
-
-
-
-include(CTest)
+# add tests
+enable_testing() 
 add_subdirectory(Test)
-
 
 
 

@@ -122,46 +122,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Test/CMakeFiles/Unity.dir/rule:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Unity.dir/rule
-.PHONY : Test/CMakeFiles/Unity.dir/rule
+Test/CMakeFiles/Test_Application.dir/rule:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_Application.dir/rule
+.PHONY : Test/CMakeFiles/Test_Application.dir/rule
 
 # Convenience name for target.
-Unity: Test/CMakeFiles/Unity.dir/rule
+Test_Application: Test/CMakeFiles/Test_Application.dir/rule
 
-.PHONY : Unity
+.PHONY : Test_Application
 
 # fast build rule for target.
-Unity/fast:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Unity.dir/build.make Test/CMakeFiles/Unity.dir/build
-.PHONY : Unity/fast
+Test_Application/fast:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/build
+.PHONY : Test_Application/fast
 
-Unity/unity.o: Unity/unity.c.o
+Test_Application.o: Test_Application.c.o
 
-.PHONY : Unity/unity.o
+.PHONY : Test_Application.o
 
 # target to build an object file
-Unity/unity.c.o:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Unity.dir/build.make Test/CMakeFiles/Unity.dir/Unity/unity.c.o
-.PHONY : Unity/unity.c.o
+Test_Application.c.o:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/Test_Application.c.o
+.PHONY : Test_Application.c.o
 
-Unity/unity.i: Unity/unity.c.i
+Test_Application.i: Test_Application.c.i
 
-.PHONY : Unity/unity.i
+.PHONY : Test_Application.i
 
 # target to preprocess a source file
-Unity/unity.c.i:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Unity.dir/build.make Test/CMakeFiles/Unity.dir/Unity/unity.c.i
-.PHONY : Unity/unity.c.i
+Test_Application.c.i:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/Test_Application.c.i
+.PHONY : Test_Application.c.i
 
-Unity/unity.s: Unity/unity.c.s
+Test_Application.s: Test_Application.c.s
 
-.PHONY : Unity/unity.s
+.PHONY : Test_Application.s
 
 # target to generate assembly for a file
-Unity/unity.c.s:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Unity.dir/build.make Test/CMakeFiles/Unity.dir/Unity/unity.c.s
-.PHONY : Unity/unity.c.s
+Test_Application.c.s:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/Test_Application.c.s
+.PHONY : Test_Application.c.s
 
 # Help Target
 help:
@@ -171,11 +171,11 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Unity"
+	@echo "... Test_Application"
 	@echo "... test"
-	@echo "... Unity/unity.o"
-	@echo "... Unity/unity.i"
-	@echo "... Unity/unity.s"
+	@echo "... Test_Application.o"
+	@echo "... Test_Application.i"
+	@echo "... Test_Application.s"
 .PHONY : help
 
 
