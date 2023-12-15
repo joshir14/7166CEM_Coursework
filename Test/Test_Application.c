@@ -1,7 +1,7 @@
 #include "Application.h"
-#include "unity.c"
-#include "candata.h"
 #include "candata.c"
+#include "candata.h"
+#include "unity.c"
 
 void setUp()
 {
@@ -121,7 +121,7 @@ void test_process_motor_current_request()
 int main(void)
 {
 	UNITY_BEGIN();
-	
+
 	RUN_TEST(test_vcu_battery_frame_process);
 	RUN_TEST(test_ai_drive_request_frame_process);
 	RUN_TEST(test_vcu_wheel_speed_frame_process);
@@ -129,6 +129,7 @@ int main(void)
 	RUN_TEST(test_torque_limit_front);
 	RUN_TEST(test_calculate_front_current);
 	RUN_TEST(test_calculate_rear_current);
+	RUN_TEST(test_process_motor_current_request);
 	
 	UNITY_END();
 	return 0;
