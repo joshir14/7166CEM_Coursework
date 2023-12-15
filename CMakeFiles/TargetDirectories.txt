@@ -8,6 +8,6 @@
 /home/pi/Desktop/7166CEM/Docs/CMakeFiles/docs.dir
 /home/pi/Desktop/7166CEM/Docs/CMakeFiles/test.dir
 /home/pi/Desktop/7166CEM/Test/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/test.dir
 /home/pi/Desktop/7166CEM/Test/CMakeFiles/edit_cache.dir
 /home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_Application.dir
-/home/pi/Desktop/7166CEM/Test/CMakeFiles/test.dir

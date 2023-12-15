@@ -5,6 +5,7 @@ Test/CMakeFiles/Test_Application.dir/Test_Application.c.o
  /home/pi/Desktop/7166CEM/Test/Test_Application.c
  Include/Application.h
  Include/can_wrap.h
+ Src_autogen/candata.c
  Src_autogen/candata.h
  Test/Unity/unity.c
  Test/Unity/unity.h

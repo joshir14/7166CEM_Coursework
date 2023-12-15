@@ -63,6 +63,7 @@ int main()
 				if (!can_write(socket_id, &TxFrame)) {
 					printf("Error\n");
 				}
+				count2 = 0;
 			}
 		}
 	}

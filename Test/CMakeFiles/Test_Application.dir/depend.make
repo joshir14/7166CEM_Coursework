@@ -4,6 +4,7 @@
 Test/CMakeFiles/Test_Application.dir/Test_Application.c.o: Test/Test_Application.c
 Test/CMakeFiles/Test_Application.dir/Test_Application.c.o: Include/Application.h
 Test/CMakeFiles/Test_Application.dir/Test_Application.c.o: Include/can_wrap.h
+Test/CMakeFiles/Test_Application.dir/Test_Application.c.o: Src_autogen/candata.c
 Test/CMakeFiles/Test_Application.dir/Test_Application.c.o: Src_autogen/candata.h
 Test/CMakeFiles/Test_Application.dir/Test_Application.c.o: Test/Unity/unity.c
 Test/CMakeFiles/Test_Application.dir/Test_Application.c.o: Test/Unity/unity.h
