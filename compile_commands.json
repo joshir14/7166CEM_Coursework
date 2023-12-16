@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/pi/Desktop/7166CEM",
+  "command": "/usr/bin/cc -Dcandata_EXPORTS -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen  -fPIC   -o CMakeFiles/candata.dir/Src_autogen/candata.c.o   -c /home/pi/Desktop/7166CEM/Src_autogen/candata.c",
+  "file": "/home/pi/Desktop/7166CEM/Src_autogen/candata.c"
+},
+{
+  "directory": "/home/pi/Desktop/7166CEM",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen    -o CMakeFiles/Application.dir/Src/Application.c.o   -c /home/pi/Desktop/7166CEM/Src/Application.c",
+  "file": "/home/pi/Desktop/7166CEM/Src/Application.c"
+},
+{
+  "directory": "/home/pi/Desktop/7166CEM/Test",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Test/Unity -I/home/pi/Desktop/7166CEM/Test/Unity/unity    -o CMakeFiles/Test_Application.dir/Test_Application.c.o   -c /home/pi/Desktop/7166CEM/Test/Test_Application.c",
+  "file": "/home/pi/Desktop/7166CEM/Test/Test_Application.c"
+}
+]

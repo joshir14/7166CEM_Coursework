@@ -20,6 +20,7 @@ void test_vcu_battery_frame_process()
 	frame.data[1] = 0x2E;
 	float voltage;
 	int output = vcu_battery_frame_process(frame, &voltage);
+	printf("Verify that battery voltage is decoded correctly\n");
 	TEST_ASSERT_EQUAL(11.597, voltage);
 	TEST_ASSERT_EQUAL(0, output);
 }
@@ -31,13 +32,14 @@ void test_ai_drive_request_frame_process()
 	frame.can_dlc = 6;
 	frame.data[0] = 0x48;
 	frame.data[1] = 0x00;
-	frame.data[2] = 0x00;
+	frame.data[2] = 0xAA;
 	frame.data[3] = 0x00;
 	frame.data[4] = 0xD3;
 	frame.data[5] = 0xFF;
 	float frontTrq, rearTrq, steeringReq;
 	int output = ai_drive_request_frame_process(frame, &frontTrq, &rearTrq, &steeringReq);
-	TEST_ASSERT_EQUAL(0, steeringReq);
+	printf("Verify that torque requests are decoded correctly\n");
+	TEST_ASSERT_EQUAL(1.7, steeringReq);
 	TEST_ASSERT_EQUAL(72, frontTrq);
 	TEST_ASSERT_EQUAL(-45, rearTrq);
 	TEST_ASSERT_EQUAL(0, output);
@@ -52,16 +54,17 @@ void test_vcu_wheel_speed_frame_process()
 	frame.can_dlc = 8;
 	frame.data[0] = 0xD1;
 	frame.data[1] = 0x00;
-	frame.data[2] = 0xD1;
+	frame.data[2] = 0xEF;
 	frame.data[3] = 0x00;
 	frame.data[4] = 0xD1;
 	frame.data[5] = 0x00;
-	frame.data[6] = 0xD1;
-	frame.data[7] = 0x00;
+	frame.data[6] = 0x90;
+	frame.data[7] = 0x01;
+	printf("Verify that wheel speeds are decoded correctly\n");
 	output = vcu_wheel_speed_frame_process(frame, &rr_speed, &rl_speed, &fr_speed, &fl_speed);
-	TEST_ASSERT_EQUAL(20, rr_speed);
+	TEST_ASSERT_EQUAL(40, rr_speed);
 	TEST_ASSERT_EQUAL(20, rl_speed);
-	TEST_ASSERT_EQUAL(20, fr_speed);
+	TEST_ASSERT_EQUAL(23, fr_speed);
 	TEST_ASSERT_EQUAL(20, fl_speed);
 	TEST_ASSERT_EQUAL(0, output);
 }
@@ -69,24 +72,51 @@ void test_vcu_wheel_speed_frame_process()
 void test_torque_limit_rear()
 {
 	int output;
-	output = torque_limit_rear(650, 400, 150, 11.23);
-	TEST_ASSERT_EQUAL(85, output);
-	output = torque_limit_rear(650, 400, 150, 2.23);
-	TEST_ASSERT_EQUAL(20, output);
+	printf("Verify that torque limit is correctly applied for rear wheels\n");
+	output = torque_limit_rear(500, 300, 200, 11.23);
+	TEST_ASSERT_EQUAL(output, 120);
+	output = torque_limit_rear(500, 710, 200, 11.23);
+	TEST_ASSERT_EQUAL(output, 50);
+	output = torque_limit_rear(500, 710, -200, 11.23);
+	TEST_ASSERT_EQUAL(output, -50);
+	output = torque_limit_rear(500, 300, -200, 11.23);
+	TEST_ASSERT_EQUAL(output, -120);
+	output = torque_limit_rear(500, 300, -200, 2.7);
+	TEST_ASSERT_EQUAL(output, -20);
+	output = torque_limit_rear(500, 300, 200, 2.7);
+	TEST_ASSERT_EQUAL(output, 20);
+	output = torque_limit_rear(200, 300, 250, 12.7);
+	TEST_ASSERT_EQUAL(output, 250);
+	output = torque_limit_rear(200, 300, -250, 12.7);
+	TEST_ASSERT_EQUAL(output, -250);
 }
 
 void test_torque_limit_front()
 {
 	int output;
-	output = torque_limit_front(650, 400, 150, 11.23);
-	TEST_ASSERT_EQUAL(85, output);
-	output = torque_limit_front(650, 400, 150, 2.23);
-	TEST_ASSERT_EQUAL(20, output);
+	printf("Verify that torque limit is correctly applied for front wheels\n");
+	output = torque_limit_front(500, 300, 200, 11.23);
+	TEST_ASSERT_EQUAL(output, 120);
+	output = torque_limit_front(500, 710, 200, 11.23);
+	TEST_ASSERT_EQUAL(output, 50);
+	output = torque_limit_front(500, 710, -200, 11.23);
+	TEST_ASSERT_EQUAL(output, -50);
+	output = torque_limit_front(500, 300, -200, 11.23);
+	TEST_ASSERT_EQUAL(output, -120);
+	output = torque_limit_front(500, 300, -200, 2.7);
+	TEST_ASSERT_EQUAL(output, -20);
+	output = torque_limit_front(500, 300, 200, 2.7);
+	TEST_ASSERT_EQUAL(output, 20);
+	output = torque_limit_front(200, 300, 250, 12.7);
+	TEST_ASSERT_EQUAL(output, 250);
+	output = torque_limit_front(200, 300, -250, 12.7);
+	TEST_ASSERT_EQUAL(output, -250);
 }
 
 void test_calculate_front_current()
 {
 	float output;
+	printf("Verify that front current is calculated correctly\n");
 	output = calculate_front_current(200, 0, 200);
 	TEST_ASSERT_EQUAL(0, output);
 	output = calculate_front_current(200, 11.23, 200);
@@ -98,6 +128,7 @@ void test_calculate_front_current()
 void test_calculate_rear_current()
 {
 	float output;
+	printf("Verify that rear current is calculated correctly\n");
 	output = calculate_rear_current(200, 0, 200);
 	TEST_ASSERT_EQUAL(0, output);
 	output = calculate_rear_current(200, 11.23, 200);
@@ -114,6 +145,7 @@ void test_process_motor_current_request()
 	expected[1] = 0x08;
 	expected[2] = 0x88;
 	expected[3] = 0xFF;
+	printf("Verify that can frame for MOTOR_CURRENT (0x320) message is generated correctly\n");
 	output = process_motor_current_request(2300, -120, buffer);
 	TEST_ASSERT_EQUAL_UINT8_ARRAY((expected), (buffer), 4);
 }
