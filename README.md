@@ -3,19 +3,22 @@
 Instructions to run the code
 
 1) Clone the repository :-
-	git clone https://github.com/joshir14/7166CEM_Coursework.git
+git clone https://github.com/joshir14/7166CEM_Coursework.git
 
-	cd 7166CEM_Coursework
+2) Change directory :-
+cd 7166CEM_Coursework
 
-2) Compile the code :-
-	cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=YES
+3) Compile the code :-
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=YES
 
-	make
+4) Build the code :-
+make
 
-3) Run Application :-
-	cd bin
+4) Change directory :-
+cd bin
 
-	./Application
+5) Run Applcation :-
+./Application
 
 
 
