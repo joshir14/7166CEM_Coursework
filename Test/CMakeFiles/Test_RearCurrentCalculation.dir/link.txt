@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/Test_RearCurrentCalculation.dir/Test_RearCurrentCalculation.c.o  -o bin/Test_RearCurrentCalculation 

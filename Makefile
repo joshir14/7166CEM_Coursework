@@ -161,17 +161,121 @@ docs/fast:
 .PHONY : docs/fast
 
 #=============================================================================
-# Target rules for targets named Test_Application
+# Target rules for targets named Test_VCUWheelSpeedFrameProcess
 
 # Build rule for target.
-Test_Application: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Test_Application
-.PHONY : Test_Application
+Test_VCUWheelSpeedFrameProcess: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test_VCUWheelSpeedFrameProcess
+.PHONY : Test_VCUWheelSpeedFrameProcess
 
 # fast build rule for target.
-Test_Application/fast:
-	$(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/build
-.PHONY : Test_Application/fast
+Test_VCUWheelSpeedFrameProcess/fast:
+	$(MAKE) -f Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build.make Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build
+.PHONY : Test_VCUWheelSpeedFrameProcess/fast
+
+#=============================================================================
+# Target rules for targets named Test_RearTorqueLimit
+
+# Build rule for target.
+Test_RearTorqueLimit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test_RearTorqueLimit
+.PHONY : Test_RearTorqueLimit
+
+# fast build rule for target.
+Test_RearTorqueLimit/fast:
+	$(MAKE) -f Test/CMakeFiles/Test_RearTorqueLimit.dir/build.make Test/CMakeFiles/Test_RearTorqueLimit.dir/build
+.PHONY : Test_RearTorqueLimit/fast
+
+#=============================================================================
+# Target rules for targets named Test_RearCurrentCalculation
+
+# Build rule for target.
+Test_RearCurrentCalculation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test_RearCurrentCalculation
+.PHONY : Test_RearCurrentCalculation
+
+# fast build rule for target.
+Test_RearCurrentCalculation/fast:
+	$(MAKE) -f Test/CMakeFiles/Test_RearCurrentCalculation.dir/build.make Test/CMakeFiles/Test_RearCurrentCalculation.dir/build
+.PHONY : Test_RearCurrentCalculation/fast
+
+#=============================================================================
+# Target rules for targets named Test_MotorCurrentFrameProcess
+
+# Build rule for target.
+Test_MotorCurrentFrameProcess: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test_MotorCurrentFrameProcess
+.PHONY : Test_MotorCurrentFrameProcess
+
+# fast build rule for target.
+Test_MotorCurrentFrameProcess/fast:
+	$(MAKE) -f Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build.make Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build
+.PHONY : Test_MotorCurrentFrameProcess/fast
+
+#=============================================================================
+# Target rules for targets named Test_BatteryFrameProcessing
+
+# Build rule for target.
+Test_BatteryFrameProcessing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test_BatteryFrameProcessing
+.PHONY : Test_BatteryFrameProcessing
+
+# fast build rule for target.
+Test_BatteryFrameProcessing/fast:
+	$(MAKE) -f Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build.make Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build
+.PHONY : Test_BatteryFrameProcessing/fast
+
+#=============================================================================
+# Target rules for targets named Test_DriveRequestFrameProcessing
+
+# Build rule for target.
+Test_DriveRequestFrameProcessing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test_DriveRequestFrameProcessing
+.PHONY : Test_DriveRequestFrameProcessing
+
+# fast build rule for target.
+Test_DriveRequestFrameProcessing/fast:
+	$(MAKE) -f Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build.make Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build
+.PHONY : Test_DriveRequestFrameProcessing/fast
+
+#=============================================================================
+# Target rules for targets named Test_GenerateCANFrame
+
+# Build rule for target.
+Test_GenerateCANFrame: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test_GenerateCANFrame
+.PHONY : Test_GenerateCANFrame
+
+# fast build rule for target.
+Test_GenerateCANFrame/fast:
+	$(MAKE) -f Test/CMakeFiles/Test_GenerateCANFrame.dir/build.make Test/CMakeFiles/Test_GenerateCANFrame.dir/build
+.PHONY : Test_GenerateCANFrame/fast
+
+#=============================================================================
+# Target rules for targets named Test_FrontCurrentCalculation
+
+# Build rule for target.
+Test_FrontCurrentCalculation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test_FrontCurrentCalculation
+.PHONY : Test_FrontCurrentCalculation
+
+# fast build rule for target.
+Test_FrontCurrentCalculation/fast:
+	$(MAKE) -f Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build.make Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build
+.PHONY : Test_FrontCurrentCalculation/fast
+
+#=============================================================================
+# Target rules for targets named Test_FrontTorqueLimit
+
+# Build rule for target.
+Test_FrontTorqueLimit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test_FrontTorqueLimit
+.PHONY : Test_FrontTorqueLimit
+
+# fast build rule for target.
+Test_FrontTorqueLimit/fast:
+	$(MAKE) -f Test/CMakeFiles/Test_FrontTorqueLimit.dir/build.make Test/CMakeFiles/Test_FrontTorqueLimit.dir/build
+.PHONY : Test_FrontTorqueLimit/fast
 
 Src/Application.o: Src/Application.c.o
 
@@ -239,7 +343,15 @@ help:
 	@echo "... candata"
 	@echo "... Application"
 	@echo "... docs"
-	@echo "... Test_Application"
+	@echo "... Test_VCUWheelSpeedFrameProcess"
+	@echo "... Test_RearTorqueLimit"
+	@echo "... Test_RearCurrentCalculation"
+	@echo "... Test_MotorCurrentFrameProcess"
+	@echo "... Test_BatteryFrameProcessing"
+	@echo "... Test_DriveRequestFrameProcessing"
+	@echo "... Test_GenerateCANFrame"
+	@echo "... Test_FrontCurrentCalculation"
+	@echo "... Test_FrontTorqueLimit"
 	@echo "... Src/Application.o"
 	@echo "... Src/Application.i"
 	@echo "... Src/Application.s"

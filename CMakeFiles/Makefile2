@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/pi/Desktop/7166CEM
 CMakeFiles/candata.dir/all:
 	$(MAKE) -f CMakeFiles/candata.dir/build.make CMakeFiles/candata.dir/depend
 	$(MAKE) -f CMakeFiles/candata.dir/build.make CMakeFiles/candata.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=5,6,7 "Built target candata"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=21,22,23 "Built target candata"
 .PHONY : CMakeFiles/candata.dir/all
 
 # Include target in all.
@@ -163,7 +163,7 @@ Docs/preinstall:
 Docs/CMakeFiles/docs.dir/all:
 	$(MAKE) -f Docs/CMakeFiles/docs.dir/build.make Docs/CMakeFiles/docs.dir/depend
 	$(MAKE) -f Docs/CMakeFiles/docs.dir/build.make Docs/CMakeFiles/docs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=8 "Built target docs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=24 "Built target docs"
 .PHONY : Docs/CMakeFiles/docs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -192,12 +192,28 @@ clean: Docs/CMakeFiles/docs.dir/clean
 # Directory level rules for directory Test
 
 # Convenience name for "all" pass in the directory.
-Test/all: Test/CMakeFiles/Test_Application.dir/all
+Test/all: Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/all
+Test/all: Test/CMakeFiles/Test_RearTorqueLimit.dir/all
+Test/all: Test/CMakeFiles/Test_RearCurrentCalculation.dir/all
+Test/all: Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/all
+Test/all: Test/CMakeFiles/Test_BatteryFrameProcessing.dir/all
+Test/all: Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/all
+Test/all: Test/CMakeFiles/Test_GenerateCANFrame.dir/all
+Test/all: Test/CMakeFiles/Test_FrontCurrentCalculation.dir/all
+Test/all: Test/CMakeFiles/Test_FrontTorqueLimit.dir/all
 
 .PHONY : Test/all
 
 # Convenience name for "clean" pass in the directory.
-Test/clean: Test/CMakeFiles/Test_Application.dir/clean
+Test/clean: Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/clean
+Test/clean: Test/CMakeFiles/Test_RearTorqueLimit.dir/clean
+Test/clean: Test/CMakeFiles/Test_RearCurrentCalculation.dir/clean
+Test/clean: Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/clean
+Test/clean: Test/CMakeFiles/Test_BatteryFrameProcessing.dir/clean
+Test/clean: Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/clean
+Test/clean: Test/CMakeFiles/Test_GenerateCANFrame.dir/clean
+Test/clean: Test/CMakeFiles/Test_FrontCurrentCalculation.dir/clean
+Test/clean: Test/CMakeFiles/Test_FrontTorqueLimit.dir/clean
 
 .PHONY : Test/clean
 
@@ -207,39 +223,335 @@ Test/preinstall:
 .PHONY : Test/preinstall
 
 #=============================================================================
-# Target rules for target Test/CMakeFiles/Test_Application.dir
+# Target rules for target Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir
 
 # All Build rule for target.
-Test/CMakeFiles/Test_Application.dir/all:
-	$(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/depend
-	$(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=3,4 "Built target Test_Application"
-.PHONY : Test/CMakeFiles/Test_Application.dir/all
+Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/all:
+	$(MAKE) -f Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build.make Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/depend
+	$(MAKE) -f Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build.make Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=19,20 "Built target Test_VCUWheelSpeedFrameProcess"
+.PHONY : Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/all
 
 # Include target in all.
-all: Test/CMakeFiles/Test_Application.dir/all
+all: Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-Test/CMakeFiles/Test_Application.dir/rule: cmake_check_build_system
+Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_Application.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
-.PHONY : Test/CMakeFiles/Test_Application.dir/rule
+.PHONY : Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/rule
 
 # Convenience name for target.
-Test_Application: Test/CMakeFiles/Test_Application.dir/rule
+Test_VCUWheelSpeedFrameProcess: Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/rule
 
-.PHONY : Test_Application
-
-# clean rule for target.
-Test/CMakeFiles/Test_Application.dir/clean:
-	$(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/clean
-.PHONY : Test/CMakeFiles/Test_Application.dir/clean
+.PHONY : Test_VCUWheelSpeedFrameProcess
 
 # clean rule for target.
-clean: Test/CMakeFiles/Test_Application.dir/clean
+Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/clean:
+	$(MAKE) -f Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build.make Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/clean
+.PHONY : Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/clean
+
+# clean rule for target.
+clean: Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Test/CMakeFiles/Test_RearTorqueLimit.dir
+
+# All Build rule for target.
+Test/CMakeFiles/Test_RearTorqueLimit.dir/all:
+	$(MAKE) -f Test/CMakeFiles/Test_RearTorqueLimit.dir/build.make Test/CMakeFiles/Test_RearTorqueLimit.dir/depend
+	$(MAKE) -f Test/CMakeFiles/Test_RearTorqueLimit.dir/build.make Test/CMakeFiles/Test_RearTorqueLimit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=17,18 "Built target Test_RearTorqueLimit"
+.PHONY : Test/CMakeFiles/Test_RearTorqueLimit.dir/all
+
+# Include target in all.
+all: Test/CMakeFiles/Test_RearTorqueLimit.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Test/CMakeFiles/Test_RearTorqueLimit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_RearTorqueLimit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
+.PHONY : Test/CMakeFiles/Test_RearTorqueLimit.dir/rule
+
+# Convenience name for target.
+Test_RearTorqueLimit: Test/CMakeFiles/Test_RearTorqueLimit.dir/rule
+
+.PHONY : Test_RearTorqueLimit
+
+# clean rule for target.
+Test/CMakeFiles/Test_RearTorqueLimit.dir/clean:
+	$(MAKE) -f Test/CMakeFiles/Test_RearTorqueLimit.dir/build.make Test/CMakeFiles/Test_RearTorqueLimit.dir/clean
+.PHONY : Test/CMakeFiles/Test_RearTorqueLimit.dir/clean
+
+# clean rule for target.
+clean: Test/CMakeFiles/Test_RearTorqueLimit.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Test/CMakeFiles/Test_RearCurrentCalculation.dir
+
+# All Build rule for target.
+Test/CMakeFiles/Test_RearCurrentCalculation.dir/all:
+	$(MAKE) -f Test/CMakeFiles/Test_RearCurrentCalculation.dir/build.make Test/CMakeFiles/Test_RearCurrentCalculation.dir/depend
+	$(MAKE) -f Test/CMakeFiles/Test_RearCurrentCalculation.dir/build.make Test/CMakeFiles/Test_RearCurrentCalculation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=15,16 "Built target Test_RearCurrentCalculation"
+.PHONY : Test/CMakeFiles/Test_RearCurrentCalculation.dir/all
+
+# Include target in all.
+all: Test/CMakeFiles/Test_RearCurrentCalculation.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Test/CMakeFiles/Test_RearCurrentCalculation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_RearCurrentCalculation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
+.PHONY : Test/CMakeFiles/Test_RearCurrentCalculation.dir/rule
+
+# Convenience name for target.
+Test_RearCurrentCalculation: Test/CMakeFiles/Test_RearCurrentCalculation.dir/rule
+
+.PHONY : Test_RearCurrentCalculation
+
+# clean rule for target.
+Test/CMakeFiles/Test_RearCurrentCalculation.dir/clean:
+	$(MAKE) -f Test/CMakeFiles/Test_RearCurrentCalculation.dir/build.make Test/CMakeFiles/Test_RearCurrentCalculation.dir/clean
+.PHONY : Test/CMakeFiles/Test_RearCurrentCalculation.dir/clean
+
+# clean rule for target.
+clean: Test/CMakeFiles/Test_RearCurrentCalculation.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir
+
+# All Build rule for target.
+Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/all:
+	$(MAKE) -f Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build.make Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/depend
+	$(MAKE) -f Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build.make Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=13,14 "Built target Test_MotorCurrentFrameProcess"
+.PHONY : Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/all
+
+# Include target in all.
+all: Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
+.PHONY : Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/rule
+
+# Convenience name for target.
+Test_MotorCurrentFrameProcess: Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/rule
+
+.PHONY : Test_MotorCurrentFrameProcess
+
+# clean rule for target.
+Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/clean:
+	$(MAKE) -f Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build.make Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/clean
+.PHONY : Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/clean
+
+# clean rule for target.
+clean: Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Test/CMakeFiles/Test_BatteryFrameProcessing.dir
+
+# All Build rule for target.
+Test/CMakeFiles/Test_BatteryFrameProcessing.dir/all:
+	$(MAKE) -f Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build.make Test/CMakeFiles/Test_BatteryFrameProcessing.dir/depend
+	$(MAKE) -f Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build.make Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=3,4 "Built target Test_BatteryFrameProcessing"
+.PHONY : Test/CMakeFiles/Test_BatteryFrameProcessing.dir/all
+
+# Include target in all.
+all: Test/CMakeFiles/Test_BatteryFrameProcessing.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Test/CMakeFiles/Test_BatteryFrameProcessing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_BatteryFrameProcessing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
+.PHONY : Test/CMakeFiles/Test_BatteryFrameProcessing.dir/rule
+
+# Convenience name for target.
+Test_BatteryFrameProcessing: Test/CMakeFiles/Test_BatteryFrameProcessing.dir/rule
+
+.PHONY : Test_BatteryFrameProcessing
+
+# clean rule for target.
+Test/CMakeFiles/Test_BatteryFrameProcessing.dir/clean:
+	$(MAKE) -f Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build.make Test/CMakeFiles/Test_BatteryFrameProcessing.dir/clean
+.PHONY : Test/CMakeFiles/Test_BatteryFrameProcessing.dir/clean
+
+# clean rule for target.
+clean: Test/CMakeFiles/Test_BatteryFrameProcessing.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir
+
+# All Build rule for target.
+Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/all:
+	$(MAKE) -f Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build.make Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/depend
+	$(MAKE) -f Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build.make Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=5,6 "Built target Test_DriveRequestFrameProcessing"
+.PHONY : Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/all
+
+# Include target in all.
+all: Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
+.PHONY : Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/rule
+
+# Convenience name for target.
+Test_DriveRequestFrameProcessing: Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/rule
+
+.PHONY : Test_DriveRequestFrameProcessing
+
+# clean rule for target.
+Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/clean:
+	$(MAKE) -f Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build.make Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/clean
+.PHONY : Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/clean
+
+# clean rule for target.
+clean: Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Test/CMakeFiles/Test_GenerateCANFrame.dir
+
+# All Build rule for target.
+Test/CMakeFiles/Test_GenerateCANFrame.dir/all:
+	$(MAKE) -f Test/CMakeFiles/Test_GenerateCANFrame.dir/build.make Test/CMakeFiles/Test_GenerateCANFrame.dir/depend
+	$(MAKE) -f Test/CMakeFiles/Test_GenerateCANFrame.dir/build.make Test/CMakeFiles/Test_GenerateCANFrame.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=11,12 "Built target Test_GenerateCANFrame"
+.PHONY : Test/CMakeFiles/Test_GenerateCANFrame.dir/all
+
+# Include target in all.
+all: Test/CMakeFiles/Test_GenerateCANFrame.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Test/CMakeFiles/Test_GenerateCANFrame.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_GenerateCANFrame.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
+.PHONY : Test/CMakeFiles/Test_GenerateCANFrame.dir/rule
+
+# Convenience name for target.
+Test_GenerateCANFrame: Test/CMakeFiles/Test_GenerateCANFrame.dir/rule
+
+.PHONY : Test_GenerateCANFrame
+
+# clean rule for target.
+Test/CMakeFiles/Test_GenerateCANFrame.dir/clean:
+	$(MAKE) -f Test/CMakeFiles/Test_GenerateCANFrame.dir/build.make Test/CMakeFiles/Test_GenerateCANFrame.dir/clean
+.PHONY : Test/CMakeFiles/Test_GenerateCANFrame.dir/clean
+
+# clean rule for target.
+clean: Test/CMakeFiles/Test_GenerateCANFrame.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Test/CMakeFiles/Test_FrontCurrentCalculation.dir
+
+# All Build rule for target.
+Test/CMakeFiles/Test_FrontCurrentCalculation.dir/all:
+	$(MAKE) -f Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build.make Test/CMakeFiles/Test_FrontCurrentCalculation.dir/depend
+	$(MAKE) -f Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build.make Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=7,8 "Built target Test_FrontCurrentCalculation"
+.PHONY : Test/CMakeFiles/Test_FrontCurrentCalculation.dir/all
+
+# Include target in all.
+all: Test/CMakeFiles/Test_FrontCurrentCalculation.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Test/CMakeFiles/Test_FrontCurrentCalculation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_FrontCurrentCalculation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
+.PHONY : Test/CMakeFiles/Test_FrontCurrentCalculation.dir/rule
+
+# Convenience name for target.
+Test_FrontCurrentCalculation: Test/CMakeFiles/Test_FrontCurrentCalculation.dir/rule
+
+.PHONY : Test_FrontCurrentCalculation
+
+# clean rule for target.
+Test/CMakeFiles/Test_FrontCurrentCalculation.dir/clean:
+	$(MAKE) -f Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build.make Test/CMakeFiles/Test_FrontCurrentCalculation.dir/clean
+.PHONY : Test/CMakeFiles/Test_FrontCurrentCalculation.dir/clean
+
+# clean rule for target.
+clean: Test/CMakeFiles/Test_FrontCurrentCalculation.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Test/CMakeFiles/Test_FrontTorqueLimit.dir
+
+# All Build rule for target.
+Test/CMakeFiles/Test_FrontTorqueLimit.dir/all:
+	$(MAKE) -f Test/CMakeFiles/Test_FrontTorqueLimit.dir/build.make Test/CMakeFiles/Test_FrontTorqueLimit.dir/depend
+	$(MAKE) -f Test/CMakeFiles/Test_FrontTorqueLimit.dir/build.make Test/CMakeFiles/Test_FrontTorqueLimit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=9,10 "Built target Test_FrontTorqueLimit"
+.PHONY : Test/CMakeFiles/Test_FrontTorqueLimit.dir/all
+
+# Include target in all.
+all: Test/CMakeFiles/Test_FrontTorqueLimit.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Test/CMakeFiles/Test_FrontTorqueLimit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_FrontTorqueLimit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/7166CEM/CMakeFiles 0
+.PHONY : Test/CMakeFiles/Test_FrontTorqueLimit.dir/rule
+
+# Convenience name for target.
+Test_FrontTorqueLimit: Test/CMakeFiles/Test_FrontTorqueLimit.dir/rule
+
+.PHONY : Test_FrontTorqueLimit
+
+# clean rule for target.
+Test/CMakeFiles/Test_FrontTorqueLimit.dir/clean:
+	$(MAKE) -f Test/CMakeFiles/Test_FrontTorqueLimit.dir/build.make Test/CMakeFiles/Test_FrontTorqueLimit.dir/clean
+.PHONY : Test/CMakeFiles/Test_FrontTorqueLimit.dir/clean
+
+# clean rule for target.
+clean: Test/CMakeFiles/Test_FrontTorqueLimit.dir/clean
 
 .PHONY : clean
 

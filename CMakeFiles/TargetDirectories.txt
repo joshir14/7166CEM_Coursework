@@ -8,6 +8,14 @@
 /home/pi/Desktop/7166CEM/Docs/CMakeFiles/docs.dir
 /home/pi/Desktop/7166CEM/Docs/CMakeFiles/test.dir
 /home/pi/Desktop/7166CEM/Test/CMakeFiles/rebuild_cache.dir
-/home/pi/Desktop/7166CEM/Test/CMakeFiles/test.dir
 /home/pi/Desktop/7166CEM/Test/CMakeFiles/edit_cache.dir
-/home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_Application.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_RearTorqueLimit.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_RearCurrentCalculation.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/test.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_BatteryFrameProcessing.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_GenerateCANFrame.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_FrontCurrentCalculation.dir
+/home/pi/Desktop/7166CEM/Test/CMakeFiles/Test_FrontTorqueLimit.dir

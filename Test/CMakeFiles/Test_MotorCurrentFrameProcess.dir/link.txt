@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/Test_MotorCurrentFrameProcess.dir/Test_MotorCurrentFrameProcess.c.o  -o bin/Test_MotorCurrentFrameProcess 

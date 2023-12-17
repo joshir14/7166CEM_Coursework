@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/Test_FrontCurrentCalculation.dir/Test_FrontCurrentCalculation.c.o  -o bin/Test_FrontCurrentCalculation 

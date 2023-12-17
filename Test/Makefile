@@ -67,17 +67,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -88,6 +77,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,46 +122,382 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Test/CMakeFiles/Test_Application.dir/rule:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_Application.dir/rule
-.PHONY : Test/CMakeFiles/Test_Application.dir/rule
+Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/rule:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/rule
+.PHONY : Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/rule
 
 # Convenience name for target.
-Test_Application: Test/CMakeFiles/Test_Application.dir/rule
+Test_VCUWheelSpeedFrameProcess: Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/rule
 
-.PHONY : Test_Application
+.PHONY : Test_VCUWheelSpeedFrameProcess
 
 # fast build rule for target.
-Test_Application/fast:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/build
-.PHONY : Test_Application/fast
+Test_VCUWheelSpeedFrameProcess/fast:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build.make Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build
+.PHONY : Test_VCUWheelSpeedFrameProcess/fast
 
-Test_Application.o: Test_Application.c.o
+# Convenience name for target.
+Test/CMakeFiles/Test_RearTorqueLimit.dir/rule:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_RearTorqueLimit.dir/rule
+.PHONY : Test/CMakeFiles/Test_RearTorqueLimit.dir/rule
 
-.PHONY : Test_Application.o
+# Convenience name for target.
+Test_RearTorqueLimit: Test/CMakeFiles/Test_RearTorqueLimit.dir/rule
+
+.PHONY : Test_RearTorqueLimit
+
+# fast build rule for target.
+Test_RearTorqueLimit/fast:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_RearTorqueLimit.dir/build.make Test/CMakeFiles/Test_RearTorqueLimit.dir/build
+.PHONY : Test_RearTorqueLimit/fast
+
+# Convenience name for target.
+Test/CMakeFiles/Test_RearCurrentCalculation.dir/rule:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_RearCurrentCalculation.dir/rule
+.PHONY : Test/CMakeFiles/Test_RearCurrentCalculation.dir/rule
+
+# Convenience name for target.
+Test_RearCurrentCalculation: Test/CMakeFiles/Test_RearCurrentCalculation.dir/rule
+
+.PHONY : Test_RearCurrentCalculation
+
+# fast build rule for target.
+Test_RearCurrentCalculation/fast:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_RearCurrentCalculation.dir/build.make Test/CMakeFiles/Test_RearCurrentCalculation.dir/build
+.PHONY : Test_RearCurrentCalculation/fast
+
+# Convenience name for target.
+Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/rule:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/rule
+.PHONY : Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/rule
+
+# Convenience name for target.
+Test_MotorCurrentFrameProcess: Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/rule
+
+.PHONY : Test_MotorCurrentFrameProcess
+
+# fast build rule for target.
+Test_MotorCurrentFrameProcess/fast:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build.make Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build
+.PHONY : Test_MotorCurrentFrameProcess/fast
+
+# Convenience name for target.
+Test/CMakeFiles/Test_BatteryFrameProcessing.dir/rule:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_BatteryFrameProcessing.dir/rule
+.PHONY : Test/CMakeFiles/Test_BatteryFrameProcessing.dir/rule
+
+# Convenience name for target.
+Test_BatteryFrameProcessing: Test/CMakeFiles/Test_BatteryFrameProcessing.dir/rule
+
+.PHONY : Test_BatteryFrameProcessing
+
+# fast build rule for target.
+Test_BatteryFrameProcessing/fast:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build.make Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build
+.PHONY : Test_BatteryFrameProcessing/fast
+
+# Convenience name for target.
+Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/rule:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/rule
+.PHONY : Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/rule
+
+# Convenience name for target.
+Test_DriveRequestFrameProcessing: Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/rule
+
+.PHONY : Test_DriveRequestFrameProcessing
+
+# fast build rule for target.
+Test_DriveRequestFrameProcessing/fast:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build.make Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build
+.PHONY : Test_DriveRequestFrameProcessing/fast
+
+# Convenience name for target.
+Test/CMakeFiles/Test_GenerateCANFrame.dir/rule:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_GenerateCANFrame.dir/rule
+.PHONY : Test/CMakeFiles/Test_GenerateCANFrame.dir/rule
+
+# Convenience name for target.
+Test_GenerateCANFrame: Test/CMakeFiles/Test_GenerateCANFrame.dir/rule
+
+.PHONY : Test_GenerateCANFrame
+
+# fast build rule for target.
+Test_GenerateCANFrame/fast:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_GenerateCANFrame.dir/build.make Test/CMakeFiles/Test_GenerateCANFrame.dir/build
+.PHONY : Test_GenerateCANFrame/fast
+
+# Convenience name for target.
+Test/CMakeFiles/Test_FrontCurrentCalculation.dir/rule:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_FrontCurrentCalculation.dir/rule
+.PHONY : Test/CMakeFiles/Test_FrontCurrentCalculation.dir/rule
+
+# Convenience name for target.
+Test_FrontCurrentCalculation: Test/CMakeFiles/Test_FrontCurrentCalculation.dir/rule
+
+.PHONY : Test_FrontCurrentCalculation
+
+# fast build rule for target.
+Test_FrontCurrentCalculation/fast:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build.make Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build
+.PHONY : Test_FrontCurrentCalculation/fast
+
+# Convenience name for target.
+Test/CMakeFiles/Test_FrontTorqueLimit.dir/rule:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f CMakeFiles/Makefile2 Test/CMakeFiles/Test_FrontTorqueLimit.dir/rule
+.PHONY : Test/CMakeFiles/Test_FrontTorqueLimit.dir/rule
+
+# Convenience name for target.
+Test_FrontTorqueLimit: Test/CMakeFiles/Test_FrontTorqueLimit.dir/rule
+
+.PHONY : Test_FrontTorqueLimit
+
+# fast build rule for target.
+Test_FrontTorqueLimit/fast:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_FrontTorqueLimit.dir/build.make Test/CMakeFiles/Test_FrontTorqueLimit.dir/build
+.PHONY : Test_FrontTorqueLimit/fast
+
+Test_BatteryFrameProcessing.o: Test_BatteryFrameProcessing.c.o
+
+.PHONY : Test_BatteryFrameProcessing.o
 
 # target to build an object file
-Test_Application.c.o:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/Test_Application.c.o
-.PHONY : Test_Application.c.o
+Test_BatteryFrameProcessing.c.o:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build.make Test/CMakeFiles/Test_BatteryFrameProcessing.dir/Test_BatteryFrameProcessing.c.o
+.PHONY : Test_BatteryFrameProcessing.c.o
 
-Test_Application.i: Test_Application.c.i
+Test_BatteryFrameProcessing.i: Test_BatteryFrameProcessing.c.i
 
-.PHONY : Test_Application.i
+.PHONY : Test_BatteryFrameProcessing.i
 
 # target to preprocess a source file
-Test_Application.c.i:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/Test_Application.c.i
-.PHONY : Test_Application.c.i
+Test_BatteryFrameProcessing.c.i:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build.make Test/CMakeFiles/Test_BatteryFrameProcessing.dir/Test_BatteryFrameProcessing.c.i
+.PHONY : Test_BatteryFrameProcessing.c.i
 
-Test_Application.s: Test_Application.c.s
+Test_BatteryFrameProcessing.s: Test_BatteryFrameProcessing.c.s
 
-.PHONY : Test_Application.s
+.PHONY : Test_BatteryFrameProcessing.s
 
 # target to generate assembly for a file
-Test_Application.c.s:
-	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_Application.dir/build.make Test/CMakeFiles/Test_Application.dir/Test_Application.c.s
-.PHONY : Test_Application.c.s
+Test_BatteryFrameProcessing.c.s:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build.make Test/CMakeFiles/Test_BatteryFrameProcessing.dir/Test_BatteryFrameProcessing.c.s
+.PHONY : Test_BatteryFrameProcessing.c.s
+
+Test_DriveRequestFrameProcessing.o: Test_DriveRequestFrameProcessing.c.o
+
+.PHONY : Test_DriveRequestFrameProcessing.o
+
+# target to build an object file
+Test_DriveRequestFrameProcessing.c.o:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build.make Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/Test_DriveRequestFrameProcessing.c.o
+.PHONY : Test_DriveRequestFrameProcessing.c.o
+
+Test_DriveRequestFrameProcessing.i: Test_DriveRequestFrameProcessing.c.i
+
+.PHONY : Test_DriveRequestFrameProcessing.i
+
+# target to preprocess a source file
+Test_DriveRequestFrameProcessing.c.i:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build.make Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/Test_DriveRequestFrameProcessing.c.i
+.PHONY : Test_DriveRequestFrameProcessing.c.i
+
+Test_DriveRequestFrameProcessing.s: Test_DriveRequestFrameProcessing.c.s
+
+.PHONY : Test_DriveRequestFrameProcessing.s
+
+# target to generate assembly for a file
+Test_DriveRequestFrameProcessing.c.s:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build.make Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/Test_DriveRequestFrameProcessing.c.s
+.PHONY : Test_DriveRequestFrameProcessing.c.s
+
+Test_FrontCurrentCalculation.o: Test_FrontCurrentCalculation.c.o
+
+.PHONY : Test_FrontCurrentCalculation.o
+
+# target to build an object file
+Test_FrontCurrentCalculation.c.o:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build.make Test/CMakeFiles/Test_FrontCurrentCalculation.dir/Test_FrontCurrentCalculation.c.o
+.PHONY : Test_FrontCurrentCalculation.c.o
+
+Test_FrontCurrentCalculation.i: Test_FrontCurrentCalculation.c.i
+
+.PHONY : Test_FrontCurrentCalculation.i
+
+# target to preprocess a source file
+Test_FrontCurrentCalculation.c.i:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build.make Test/CMakeFiles/Test_FrontCurrentCalculation.dir/Test_FrontCurrentCalculation.c.i
+.PHONY : Test_FrontCurrentCalculation.c.i
+
+Test_FrontCurrentCalculation.s: Test_FrontCurrentCalculation.c.s
+
+.PHONY : Test_FrontCurrentCalculation.s
+
+# target to generate assembly for a file
+Test_FrontCurrentCalculation.c.s:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build.make Test/CMakeFiles/Test_FrontCurrentCalculation.dir/Test_FrontCurrentCalculation.c.s
+.PHONY : Test_FrontCurrentCalculation.c.s
+
+Test_FrontTorqueLimit.o: Test_FrontTorqueLimit.c.o
+
+.PHONY : Test_FrontTorqueLimit.o
+
+# target to build an object file
+Test_FrontTorqueLimit.c.o:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_FrontTorqueLimit.dir/build.make Test/CMakeFiles/Test_FrontTorqueLimit.dir/Test_FrontTorqueLimit.c.o
+.PHONY : Test_FrontTorqueLimit.c.o
+
+Test_FrontTorqueLimit.i: Test_FrontTorqueLimit.c.i
+
+.PHONY : Test_FrontTorqueLimit.i
+
+# target to preprocess a source file
+Test_FrontTorqueLimit.c.i:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_FrontTorqueLimit.dir/build.make Test/CMakeFiles/Test_FrontTorqueLimit.dir/Test_FrontTorqueLimit.c.i
+.PHONY : Test_FrontTorqueLimit.c.i
+
+Test_FrontTorqueLimit.s: Test_FrontTorqueLimit.c.s
+
+.PHONY : Test_FrontTorqueLimit.s
+
+# target to generate assembly for a file
+Test_FrontTorqueLimit.c.s:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_FrontTorqueLimit.dir/build.make Test/CMakeFiles/Test_FrontTorqueLimit.dir/Test_FrontTorqueLimit.c.s
+.PHONY : Test_FrontTorqueLimit.c.s
+
+Test_GenerateCANFrame.o: Test_GenerateCANFrame.c.o
+
+.PHONY : Test_GenerateCANFrame.o
+
+# target to build an object file
+Test_GenerateCANFrame.c.o:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_GenerateCANFrame.dir/build.make Test/CMakeFiles/Test_GenerateCANFrame.dir/Test_GenerateCANFrame.c.o
+.PHONY : Test_GenerateCANFrame.c.o
+
+Test_GenerateCANFrame.i: Test_GenerateCANFrame.c.i
+
+.PHONY : Test_GenerateCANFrame.i
+
+# target to preprocess a source file
+Test_GenerateCANFrame.c.i:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_GenerateCANFrame.dir/build.make Test/CMakeFiles/Test_GenerateCANFrame.dir/Test_GenerateCANFrame.c.i
+.PHONY : Test_GenerateCANFrame.c.i
+
+Test_GenerateCANFrame.s: Test_GenerateCANFrame.c.s
+
+.PHONY : Test_GenerateCANFrame.s
+
+# target to generate assembly for a file
+Test_GenerateCANFrame.c.s:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_GenerateCANFrame.dir/build.make Test/CMakeFiles/Test_GenerateCANFrame.dir/Test_GenerateCANFrame.c.s
+.PHONY : Test_GenerateCANFrame.c.s
+
+Test_MotorCurrentFrameProcess.o: Test_MotorCurrentFrameProcess.c.o
+
+.PHONY : Test_MotorCurrentFrameProcess.o
+
+# target to build an object file
+Test_MotorCurrentFrameProcess.c.o:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build.make Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/Test_MotorCurrentFrameProcess.c.o
+.PHONY : Test_MotorCurrentFrameProcess.c.o
+
+Test_MotorCurrentFrameProcess.i: Test_MotorCurrentFrameProcess.c.i
+
+.PHONY : Test_MotorCurrentFrameProcess.i
+
+# target to preprocess a source file
+Test_MotorCurrentFrameProcess.c.i:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build.make Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/Test_MotorCurrentFrameProcess.c.i
+.PHONY : Test_MotorCurrentFrameProcess.c.i
+
+Test_MotorCurrentFrameProcess.s: Test_MotorCurrentFrameProcess.c.s
+
+.PHONY : Test_MotorCurrentFrameProcess.s
+
+# target to generate assembly for a file
+Test_MotorCurrentFrameProcess.c.s:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build.make Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/Test_MotorCurrentFrameProcess.c.s
+.PHONY : Test_MotorCurrentFrameProcess.c.s
+
+Test_RearCurrentCalculation.o: Test_RearCurrentCalculation.c.o
+
+.PHONY : Test_RearCurrentCalculation.o
+
+# target to build an object file
+Test_RearCurrentCalculation.c.o:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_RearCurrentCalculation.dir/build.make Test/CMakeFiles/Test_RearCurrentCalculation.dir/Test_RearCurrentCalculation.c.o
+.PHONY : Test_RearCurrentCalculation.c.o
+
+Test_RearCurrentCalculation.i: Test_RearCurrentCalculation.c.i
+
+.PHONY : Test_RearCurrentCalculation.i
+
+# target to preprocess a source file
+Test_RearCurrentCalculation.c.i:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_RearCurrentCalculation.dir/build.make Test/CMakeFiles/Test_RearCurrentCalculation.dir/Test_RearCurrentCalculation.c.i
+.PHONY : Test_RearCurrentCalculation.c.i
+
+Test_RearCurrentCalculation.s: Test_RearCurrentCalculation.c.s
+
+.PHONY : Test_RearCurrentCalculation.s
+
+# target to generate assembly for a file
+Test_RearCurrentCalculation.c.s:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_RearCurrentCalculation.dir/build.make Test/CMakeFiles/Test_RearCurrentCalculation.dir/Test_RearCurrentCalculation.c.s
+.PHONY : Test_RearCurrentCalculation.c.s
+
+Test_RearTorqueLimit.o: Test_RearTorqueLimit.c.o
+
+.PHONY : Test_RearTorqueLimit.o
+
+# target to build an object file
+Test_RearTorqueLimit.c.o:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_RearTorqueLimit.dir/build.make Test/CMakeFiles/Test_RearTorqueLimit.dir/Test_RearTorqueLimit.c.o
+.PHONY : Test_RearTorqueLimit.c.o
+
+Test_RearTorqueLimit.i: Test_RearTorqueLimit.c.i
+
+.PHONY : Test_RearTorqueLimit.i
+
+# target to preprocess a source file
+Test_RearTorqueLimit.c.i:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_RearTorqueLimit.dir/build.make Test/CMakeFiles/Test_RearTorqueLimit.dir/Test_RearTorqueLimit.c.i
+.PHONY : Test_RearTorqueLimit.c.i
+
+Test_RearTorqueLimit.s: Test_RearTorqueLimit.c.s
+
+.PHONY : Test_RearTorqueLimit.s
+
+# target to generate assembly for a file
+Test_RearTorqueLimit.c.s:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_RearTorqueLimit.dir/build.make Test/CMakeFiles/Test_RearTorqueLimit.dir/Test_RearTorqueLimit.c.s
+.PHONY : Test_RearTorqueLimit.c.s
+
+Test_VCUWheelSpeedFrameProcess.o: Test_VCUWheelSpeedFrameProcess.c.o
+
+.PHONY : Test_VCUWheelSpeedFrameProcess.o
+
+# target to build an object file
+Test_VCUWheelSpeedFrameProcess.c.o:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build.make Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/Test_VCUWheelSpeedFrameProcess.c.o
+.PHONY : Test_VCUWheelSpeedFrameProcess.c.o
+
+Test_VCUWheelSpeedFrameProcess.i: Test_VCUWheelSpeedFrameProcess.c.i
+
+.PHONY : Test_VCUWheelSpeedFrameProcess.i
+
+# target to preprocess a source file
+Test_VCUWheelSpeedFrameProcess.c.i:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build.make Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/Test_VCUWheelSpeedFrameProcess.c.i
+.PHONY : Test_VCUWheelSpeedFrameProcess.c.i
+
+Test_VCUWheelSpeedFrameProcess.s: Test_VCUWheelSpeedFrameProcess.c.s
+
+.PHONY : Test_VCUWheelSpeedFrameProcess.s
+
+# target to generate assembly for a file
+Test_VCUWheelSpeedFrameProcess.c.s:
+	cd /home/pi/Desktop/7166CEM && $(MAKE) -f Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build.make Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/Test_VCUWheelSpeedFrameProcess.c.s
+.PHONY : Test_VCUWheelSpeedFrameProcess.c.s
 
 # Help Target
 help:
@@ -170,12 +506,44 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... Test_Application"
-	@echo "... Test_Application.o"
-	@echo "... Test_Application.i"
-	@echo "... Test_Application.s"
+	@echo "... Test_VCUWheelSpeedFrameProcess"
+	@echo "... Test_RearTorqueLimit"
+	@echo "... Test_RearCurrentCalculation"
+	@echo "... Test_MotorCurrentFrameProcess"
+	@echo "... test"
+	@echo "... Test_BatteryFrameProcessing"
+	@echo "... Test_DriveRequestFrameProcessing"
+	@echo "... Test_GenerateCANFrame"
+	@echo "... Test_FrontCurrentCalculation"
+	@echo "... Test_FrontTorqueLimit"
+	@echo "... Test_BatteryFrameProcessing.o"
+	@echo "... Test_BatteryFrameProcessing.i"
+	@echo "... Test_BatteryFrameProcessing.s"
+	@echo "... Test_DriveRequestFrameProcessing.o"
+	@echo "... Test_DriveRequestFrameProcessing.i"
+	@echo "... Test_DriveRequestFrameProcessing.s"
+	@echo "... Test_FrontCurrentCalculation.o"
+	@echo "... Test_FrontCurrentCalculation.i"
+	@echo "... Test_FrontCurrentCalculation.s"
+	@echo "... Test_FrontTorqueLimit.o"
+	@echo "... Test_FrontTorqueLimit.i"
+	@echo "... Test_FrontTorqueLimit.s"
+	@echo "... Test_GenerateCANFrame.o"
+	@echo "... Test_GenerateCANFrame.i"
+	@echo "... Test_GenerateCANFrame.s"
+	@echo "... Test_MotorCurrentFrameProcess.o"
+	@echo "... Test_MotorCurrentFrameProcess.i"
+	@echo "... Test_MotorCurrentFrameProcess.s"
+	@echo "... Test_RearCurrentCalculation.o"
+	@echo "... Test_RearCurrentCalculation.i"
+	@echo "... Test_RearCurrentCalculation.s"
+	@echo "... Test_RearTorqueLimit.o"
+	@echo "... Test_RearTorqueLimit.i"
+	@echo "... Test_RearTorqueLimit.s"
+	@echo "... Test_VCUWheelSpeedFrameProcess.o"
+	@echo "... Test_VCUWheelSpeedFrameProcess.i"
+	@echo "... Test_VCUWheelSpeedFrameProcess.s"
 .PHONY : help
 
 
