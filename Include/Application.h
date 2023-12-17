@@ -1,10 +1,9 @@
 // NOLINTBEGIN
 // NOLINTNEXTLINE
-#include "can_wrap.h"  
+#include "can_wrap.h"
 // NOLINTNEXTLINE
-#include "candata.h"  
+#include "candata.h"
 // NOLINTEND
-
 
 /**
  * Processes VCU_BATTERY message and stores battery voltage.
