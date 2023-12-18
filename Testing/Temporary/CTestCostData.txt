@@ -1,10 +1,10 @@
-Test_BatteryFrameProcessing 44 0.000130566
-Test_DriveRequestFrameProcessing 40 0.000121428
-Test_FrontCurrentCalculation 46 0.000117256
-Test_FrontTorqueLimit 42 0.000107386
-Test_GenerateCANFrame 45 9.7329e-05
-Test_MotorCurrentFrameProcess 45 0.000190771
-Test_RearCurrentCalculation 44 0.00011558
-Test_RearTorqueLimit 45 0.000115896
-Test_VCUWheelSpeedFrameProcess 45 0.000122184
+Test_BatteryFrameProcessing 45 0.000140362
+Test_DriveRequestFrameProcessing 41 0.00016442
+Test_FrontCurrentCalculation 47 9.28179e-05
+Test_FrontTorqueLimit 43 0.00014315
+Test_GenerateCANFrame 46 9.28152e-05
+Test_MotorCurrentFrameProcess 46 9.65542e-05
+Test_RearCurrentCalculation 45 0.000147826
+Test_RearTorqueLimit 46 0.00010699
+Test_VCUWheelSpeedFrameProcess 46 0.000166989
 ---

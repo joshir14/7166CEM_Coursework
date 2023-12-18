@@ -1,5 +1,7 @@
 7166CEM_Coursework
 
+Make sure to delete CMakeCache.txt file.
+
 Setup :-
 1) Load CAN socket module -
 sudo modprobe can
