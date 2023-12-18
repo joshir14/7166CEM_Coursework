@@ -4,22 +4,36 @@ int main()
 {
 	const int socket_id = can_connect("vcan0", 0);
 	float cf1, cr1;
+	cf1 = 0;
+	cr1 = 0;
 	int count1, count2, count3;
 	struct can_frame frame, TxFrame;
-	float batteryVoltage;
-	int dlc;
-	int status;
+	float batteryVoltage = 0.0f;
+	int dlc = 0;
 	uint16_t rr_wheelSpeed, rl_wheelSpeed, fr_wheelSpeed, fl_wheelSpeed;
+	rr_wheelSpeed = 0;
+	rl_wheelSpeed = 0;
+	fr_wheelSpeed = 0;
+	fl_wheelSpeed = 0;
 	uint16_t fs, rs;
+	fs = 0;
+	rs = 0;
 	float frontCurrent, rearCurrent;
+	frontCurrent = 0.0f;
+	rearCurrent = 0.0f;
 	float steeringReq, rearTrq, frontTrq;
+	steeringReq = 0.0f;
+	rearTrq = 0.0f;
+	frontTrq = 0.0f;
 	uint8_t currentDataBuffer[8];
 	int tf1, tr1;
+	tf1 = 0;
+	tr1 = 0;
 	count1 = 0;
 	count2 = 0;
 	count3 = 0;
 	while (1) {
-		status = can_read(socket_id, &frame);
+		int status = can_read(socket_id, &frame);
 		if (status == 1) {
 			if ((frame.can_id == 0x526) && (frame.can_dlc > 0)) {
 				count1 = count1 + 1;
@@ -40,6 +54,7 @@ int main()
 				printf("Front left wheel speed is %d\n", fl_wheelSpeed);
 				printf("Rear right wheel speed is %d\n", rr_wheelSpeed);
 				printf("Rear left wheel speed is %d\n", rl_wheelSpeed);
+			} else {
 			}
 
 			if ((count1 > 0) && (count2 > 0) && (count3 > 0)) {

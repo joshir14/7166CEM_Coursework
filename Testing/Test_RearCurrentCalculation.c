@@ -15,7 +15,6 @@ int main()
 {
 	UNITY_BEGIN();
 	float output;
-	printf("Verify that rear current is calculated correctly\n");
 	output = calculate_rear_current(200, 0, 200);
 	TEST_ASSERT_EQUAL(0, output);
 	output = calculate_rear_current(200, 11.23, 200);

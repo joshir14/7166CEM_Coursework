@@ -15,7 +15,6 @@ int main()
 {
 	UNITY_BEGIN();
 	int output;
-	printf("Verify that torque limit is correctly applied for front wheels\n");
 	output = torque_limit_front(500, 710, 200, 11.23);
 	TEST_ASSERT_EQUAL(output, 50);
 	output = torque_limit_front(500, 300, -200, 11.23);

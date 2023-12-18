@@ -21,9 +21,7 @@ int main()
 	frame.data[1] = 0x2E;
 	float voltage;
 	int output = vcu_battery_frame_process(frame, &voltage);
-	printf("Verify that battery voltage is decoded correctly\n");
 	TEST_ASSERT_EQUAL(11.597, voltage);
-	printf("Verify that return status is 0\n");
 	TEST_ASSERT_EQUAL(0, output);
 	UNITY_END();
 	return 0;

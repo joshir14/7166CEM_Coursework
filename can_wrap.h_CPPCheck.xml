@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.86"/>
+    <errors>
+        <error id="unusedFunction" severity="style" msg="The function &apos;can_close&apos; is never used." verbose="The function &apos;can_close&apos; is never used." cwe="561">
+            <location file="Include/can_wrap.h" line="62"/>
+            <symbol>can_close</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;can_connect&apos; is never used." verbose="The function &apos;can_connect&apos; is never used." cwe="561">
+            <location file="Include/can_wrap.h" line="29"/>
+            <symbol>can_connect</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;can_read&apos; is never used." verbose="The function &apos;can_read&apos; is never used." cwe="561">
+            <location file="Include/can_wrap.h" line="75"/>
+            <symbol>can_read</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;can_readfd&apos; is never used." verbose="The function &apos;can_readfd&apos; is never used." cwe="561">
+            <location file="Include/can_wrap.h" line="88"/>
+            <symbol>can_readfd</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;can_write&apos; is never used." verbose="The function &apos;can_write&apos; is never used." cwe="561">
+            <location file="Include/can_wrap.h" line="100"/>
+            <symbol>can_write</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;can_writefd&apos; is never used." verbose="The function &apos;can_writefd&apos; is never used." cwe="561">
+            <location file="Include/can_wrap.h" line="112"/>
+            <symbol>can_writefd</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

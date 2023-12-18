@@ -26,7 +26,6 @@ int main(void)
 	int dlc;
 	dlc = 4;
 	uint8_t status;
-	printf("Verify that CAN frame is correctly generated\n");
 	status = generate_can_frame(&frame, currentDataBuffer, can_id, dlc);
 	TEST_ASSERT_EQUAL_UINT8_ARRAY((currentDataBuffer), (frame.data), dlc);
 	TEST_ASSERT_EQUAL(status, 1);

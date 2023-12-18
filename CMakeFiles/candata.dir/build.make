@@ -58,7 +58,7 @@ include CMakeFiles/candata.dir/progress.make
 include CMakeFiles/candata.dir/flags.make
 
 Src_autogen/candata.h: candata.dbc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Autogenerate code from DBC file"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Desktop/7166CEM/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Auto code generation from DBC file"
 	python3 -m cantools generate_c_source candata.dbc -o Src_autogen
 
 Src_autogen/candata.c: Src_autogen/candata.h

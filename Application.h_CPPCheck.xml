@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.86"/>
+    <errors>
+        <error id="unusedFunction" severity="style" msg="The function &apos;ai_drive_request_frame_process&apos; is never used." verbose="The function &apos;ai_drive_request_frame_process&apos; is never used." cwe="561">
+            <location file="Include/Application.h" line="226"/>
+            <symbol>ai_drive_request_frame_process</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;calculate_front_current&apos; is never used." verbose="The function &apos;calculate_front_current&apos; is never used." cwe="561">
+            <location file="Include/Application.h" line="108"/>
+            <symbol>calculate_front_current</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;calculate_rear_current&apos; is never used." verbose="The function &apos;calculate_rear_current&apos; is never used." cwe="561">
+            <location file="Include/Application.h" line="126"/>
+            <symbol>calculate_rear_current</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;generate_can_frame&apos; is never used." verbose="The function &apos;generate_can_frame&apos; is never used." cwe="561">
+            <location file="Include/Application.h" line="261"/>
+            <symbol>generate_can_frame</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;process_motor_current_request&apos; is never used." verbose="The function &apos;process_motor_current_request&apos; is never used." cwe="561">
+            <location file="Include/Application.h" line="216"/>
+            <symbol>process_motor_current_request</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;torque_limit_front&apos; is never used." verbose="The function &apos;torque_limit_front&apos; is never used." cwe="561">
+            <location file="Include/Application.h" line="144"/>
+            <symbol>torque_limit_front</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;torque_limit_rear&apos; is never used." verbose="The function &apos;torque_limit_rear&apos; is never used." cwe="561">
+            <location file="Include/Application.h" line="181"/>
+            <symbol>torque_limit_rear</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;vcu_battery_frame_process&apos; is never used." verbose="The function &apos;vcu_battery_frame_process&apos; is never used." cwe="561">
+            <location file="Include/Application.h" line="238"/>
+            <symbol>vcu_battery_frame_process</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;vcu_wheel_speed_frame_process&apos; is never used." verbose="The function &apos;vcu_wheel_speed_frame_process&apos; is never used." cwe="561">
+            <location file="Include/Application.h" line="248"/>
+            <symbol>vcu_wheel_speed_frame_process</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

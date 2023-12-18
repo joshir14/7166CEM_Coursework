@@ -28,7 +28,6 @@ int main()
 	frame.data[5] = 0x00;
 	frame.data[6] = 0x90;
 	frame.data[7] = 0x01;
-	printf("Verify that wheel speeds are decoded correctly\n");
 	output = vcu_wheel_speed_frame_process(frame, &rr_speed, &rl_speed, &fr_speed, &fl_speed);
 	TEST_ASSERT_EQUAL(40, rr_speed);
 	TEST_ASSERT_EQUAL(20, rl_speed);

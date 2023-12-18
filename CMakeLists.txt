@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+   cmake_minimum_required(VERSION 3.0)
 set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
@@ -11,13 +11,13 @@ file( MAKE_DIRECTORY Src_autogen )
 add_custom_command( OUTPUT Src_autogen/candata.h Src_autogen/candata.c
         COMMAND python3 -m cantools generate_c_source candata.dbc -o Src_autogen
         MAIN_DEPENDENCY candata.dbc
-        COMMENT "Autogenerate code from DBC file" )
-
-include_directories( Include )
-include_directories( Src_autogen )
+        COMMENT "Auto code generation from DBC file" )
 
 find_package(Doxygen)
 add_subdirectory(Docs)
+
+include_directories( Include )
+include_directories( Src_autogen )
 
 file( MAKE_DIRECTORY bin )    
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY bin )
