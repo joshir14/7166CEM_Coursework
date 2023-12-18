@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/Unity/unity 
+C_INCLUDES = -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/CTest -I/home/pi/Desktop/7166CEM/Testing/Unity/unity 
 

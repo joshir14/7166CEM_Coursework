@@ -144,7 +144,7 @@ float calculate_rear_current(int tr, float v, uint16_t rr)
 int torque_limit_front(uint16_t fr_wheelSpeed, uint16_t fl_wheelSpeed, float frontTrq, float batteryVoltage)
 {
 	int tf, tf1;
-	int x = (fr_wheelSpeed >= fl_wheelSpeed) ? fr_wheelSpeed : fl_wheelSpeed;
+	uint16_t x = (fr_wheelSpeed >= fl_wheelSpeed) ? fr_wheelSpeed : fl_wheelSpeed;
 	int multiplier;
 	int y;
 	y = (int)frontTrq;
@@ -181,7 +181,7 @@ int torque_limit_front(uint16_t fr_wheelSpeed, uint16_t fl_wheelSpeed, float fro
 int torque_limit_rear(uint16_t rr_wheelSpeed, uint16_t rl_wheelSpeed, float rearTrq, float batteryVoltage)
 {
 	int tr, tr1;
-	int x = (rr_wheelSpeed >= rl_wheelSpeed) ? rr_wheelSpeed : rl_wheelSpeed;
+	uint16_t x = (rr_wheelSpeed >= rl_wheelSpeed) ? rr_wheelSpeed : rl_wheelSpeed;
 	int multiplier;
 	int y;
 	y = (int)rearTrq;

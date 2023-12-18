@@ -13,6 +13,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "Include"
   "Src_autogen"
   "Testing/Unity"
+  "Testing/CTest"
   "Testing/Unity/unity"
   )
 

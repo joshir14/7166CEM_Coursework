@@ -11,47 +11,47 @@
 },
 {
   "directory": "/home/pi/Desktop/7166CEM/Testing",
-  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/Test_VCUWheelSpeedFrameProcess.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_VCUWheelSpeedFrameProcess.c",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/CTest -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/Test_VCUWheelSpeedFrameProcess.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_VCUWheelSpeedFrameProcess.c",
   "file": "/home/pi/Desktop/7166CEM/Testing/Test_VCUWheelSpeedFrameProcess.c"
 },
 {
   "directory": "/home/pi/Desktop/7166CEM/Testing",
-  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_RearTorqueLimit.dir/Test_RearTorqueLimit.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_RearTorqueLimit.c",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/CTest -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_RearTorqueLimit.dir/Test_RearTorqueLimit.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_RearTorqueLimit.c",
   "file": "/home/pi/Desktop/7166CEM/Testing/Test_RearTorqueLimit.c"
 },
 {
   "directory": "/home/pi/Desktop/7166CEM/Testing",
-  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_RearCurrentCalculation.dir/Test_RearCurrentCalculation.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_RearCurrentCalculation.c",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/CTest -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_RearCurrentCalculation.dir/Test_RearCurrentCalculation.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_RearCurrentCalculation.c",
   "file": "/home/pi/Desktop/7166CEM/Testing/Test_RearCurrentCalculation.c"
 },
 {
   "directory": "/home/pi/Desktop/7166CEM/Testing",
-  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_MotorCurrentFrameProcess.dir/Test_MotorCurrentFrameProcess.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_MotorCurrentFrameProcess.c",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/CTest -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_MotorCurrentFrameProcess.dir/Test_MotorCurrentFrameProcess.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_MotorCurrentFrameProcess.c",
   "file": "/home/pi/Desktop/7166CEM/Testing/Test_MotorCurrentFrameProcess.c"
 },
 {
   "directory": "/home/pi/Desktop/7166CEM/Testing",
-  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_BatteryFrameProcessing.dir/Test_BatteryFrameProcessing.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_BatteryFrameProcessing.c",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/CTest -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_BatteryFrameProcessing.dir/Test_BatteryFrameProcessing.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_BatteryFrameProcessing.c",
   "file": "/home/pi/Desktop/7166CEM/Testing/Test_BatteryFrameProcessing.c"
 },
 {
   "directory": "/home/pi/Desktop/7166CEM/Testing",
-  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_DriveRequestFrameProcessing.dir/Test_DriveRequestFrameProcessing.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_DriveRequestFrameProcessing.c",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/CTest -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_DriveRequestFrameProcessing.dir/Test_DriveRequestFrameProcessing.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_DriveRequestFrameProcessing.c",
   "file": "/home/pi/Desktop/7166CEM/Testing/Test_DriveRequestFrameProcessing.c"
 },
 {
   "directory": "/home/pi/Desktop/7166CEM/Testing",
-  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_GenerateCANFrame.dir/Test_GenerateCANFrame.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_GenerateCANFrame.c",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/CTest -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_GenerateCANFrame.dir/Test_GenerateCANFrame.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_GenerateCANFrame.c",
   "file": "/home/pi/Desktop/7166CEM/Testing/Test_GenerateCANFrame.c"
 },
 {
   "directory": "/home/pi/Desktop/7166CEM/Testing",
-  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_FrontCurrentCalculation.dir/Test_FrontCurrentCalculation.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_FrontCurrentCalculation.c",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/CTest -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_FrontCurrentCalculation.dir/Test_FrontCurrentCalculation.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_FrontCurrentCalculation.c",
   "file": "/home/pi/Desktop/7166CEM/Testing/Test_FrontCurrentCalculation.c"
 },
 {
   "directory": "/home/pi/Desktop/7166CEM/Testing",
-  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_FrontTorqueLimit.dir/Test_FrontTorqueLimit.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_FrontTorqueLimit.c",
+  "command": "/usr/bin/cc  -I/home/pi/Desktop/7166CEM/Include -I/home/pi/Desktop/7166CEM/Src_autogen -I/home/pi/Desktop/7166CEM/Testing/Unity -I/home/pi/Desktop/7166CEM/Testing/CTest -I/home/pi/Desktop/7166CEM/Testing/Unity/unity    -o CMakeFiles/Test_FrontTorqueLimit.dir/Test_FrontTorqueLimit.c.o   -c /home/pi/Desktop/7166CEM/Testing/Test_FrontTorqueLimit.c",
   "file": "/home/pi/Desktop/7166CEM/Testing/Test_FrontTorqueLimit.c"
 }
 ]
