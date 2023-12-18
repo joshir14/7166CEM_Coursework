@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/pi/Desktop/7166CEM
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -88,6 +77,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,6 +122,175 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ContinuousSubmit
+
+# Build rule for target.
+ContinuousSubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousSubmit
+.PHONY : ContinuousSubmit
+
+# fast build rule for target.
+ContinuousSubmit/fast:
+	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
+.PHONY : ContinuousSubmit/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousBuild
+
+# Build rule for target.
+ContinuousBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousBuild
+.PHONY : ContinuousBuild
+
+# fast build rule for target.
+ContinuousBuild/fast:
+	$(MAKE) -f CMakeFiles/ContinuousBuild.dir/build.make CMakeFiles/ContinuousBuild.dir/build
+.PHONY : ContinuousBuild/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalSubmit
+
+# Build rule for target.
+ExperimentalSubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalSubmit
+.PHONY : ExperimentalSubmit
+
+# fast build rule for target.
+ExperimentalSubmit/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalSubmit.dir/build.make CMakeFiles/ExperimentalSubmit.dir/build
+.PHONY : ExperimentalSubmit/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousStart
+
+# Build rule for target.
+ContinuousStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousStart
+.PHONY : ContinuousStart
+
+# fast build rule for target.
+ContinuousStart/fast:
+	$(MAKE) -f CMakeFiles/ContinuousStart.dir/build.make CMakeFiles/ContinuousStart.dir/build
+.PHONY : ContinuousStart/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalMemCheck
+
+# Build rule for target.
+ExperimentalMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalMemCheck
+.PHONY : ExperimentalMemCheck
+
+# fast build rule for target.
+ExperimentalMemCheck/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalMemCheck.dir/build.make CMakeFiles/ExperimentalMemCheck.dir/build
+.PHONY : ExperimentalMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalCoverage
+
+# Build rule for target.
+ExperimentalCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalCoverage
+.PHONY : ExperimentalCoverage
+
+# fast build rule for target.
+ExperimentalCoverage/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalCoverage.dir/build.make CMakeFiles/ExperimentalCoverage.dir/build
+.PHONY : ExperimentalCoverage/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemoryCheck
+
+# Build rule for target.
+NightlyMemoryCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemoryCheck
+.PHONY : NightlyMemoryCheck
+
+# fast build rule for target.
+NightlyMemoryCheck/fast:
+	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/build
+.PHONY : NightlyMemoryCheck/fast
+
+#=============================================================================
+# Target rules for targets named NightlyCoverage
+
+# Build rule for target.
+NightlyCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyCoverage
+.PHONY : NightlyCoverage
+
+# fast build rule for target.
+NightlyCoverage/fast:
+	$(MAKE) -f CMakeFiles/NightlyCoverage.dir/build.make CMakeFiles/NightlyCoverage.dir/build
+.PHONY : NightlyCoverage/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousUpdate
+
+# Build rule for target.
+ContinuousUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousUpdate
+.PHONY : ContinuousUpdate
+
+# fast build rule for target.
+ContinuousUpdate/fast:
+	$(MAKE) -f CMakeFiles/ContinuousUpdate.dir/build.make CMakeFiles/ContinuousUpdate.dir/build
+.PHONY : ContinuousUpdate/fast
+
+#=============================================================================
+# Target rules for targets named Continuous
+
+# Build rule for target.
+Continuous: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Continuous
+.PHONY : Continuous
+
+# fast build rule for target.
+Continuous/fast:
+	$(MAKE) -f CMakeFiles/Continuous.dir/build.make CMakeFiles/Continuous.dir/build
+.PHONY : Continuous/fast
+
+#=============================================================================
+# Target rules for targets named Experimental
+
+# Build rule for target.
+Experimental: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Experimental
+.PHONY : Experimental
+
+# fast build rule for target.
+Experimental/fast:
+	$(MAKE) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/build
+.PHONY : Experimental/fast
+
+#=============================================================================
+# Target rules for targets named NightlyBuild
+
+# Build rule for target.
+NightlyBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyBuild
+.PHONY : NightlyBuild
+
+# fast build rule for target.
+NightlyBuild/fast:
+	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/build
+.PHONY : NightlyBuild/fast
+
+#=============================================================================
+# Target rules for targets named NightlyConfigure
+
+# Build rule for target.
+NightlyConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyConfigure
+.PHONY : NightlyConfigure
+
+# fast build rule for target.
+NightlyConfigure/fast:
+	$(MAKE) -f CMakeFiles/NightlyConfigure.dir/build.make CMakeFiles/NightlyConfigure.dir/build
+.PHONY : NightlyConfigure/fast
+
+#=============================================================================
 # Target rules for targets named candata
 
 # Build rule for target.
@@ -135,6 +304,188 @@ candata/fast:
 .PHONY : candata/fast
 
 #=============================================================================
+# Target rules for targets named Nightly
+
+# Build rule for target.
+Nightly: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Nightly
+.PHONY : Nightly
+
+# fast build rule for target.
+Nightly/fast:
+	$(MAKE) -f CMakeFiles/Nightly.dir/build.make CMakeFiles/Nightly.dir/build
+.PHONY : Nightly/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousMemCheck
+
+# Build rule for target.
+ContinuousMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousMemCheck
+.PHONY : ContinuousMemCheck
+
+# fast build rule for target.
+ContinuousMemCheck/fast:
+	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/build
+.PHONY : ContinuousMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalBuild
+
+# Build rule for target.
+ExperimentalBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalBuild
+.PHONY : ExperimentalBuild
+
+# fast build rule for target.
+ExperimentalBuild/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/build
+.PHONY : ExperimentalBuild/fast
+
+#=============================================================================
+# Target rules for targets named NightlyUpdate
+
+# Build rule for target.
+NightlyUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyUpdate
+.PHONY : NightlyUpdate
+
+# fast build rule for target.
+NightlyUpdate/fast:
+	$(MAKE) -f CMakeFiles/NightlyUpdate.dir/build.make CMakeFiles/NightlyUpdate.dir/build
+.PHONY : NightlyUpdate/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousCoverage
+
+# Build rule for target.
+ContinuousCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousCoverage
+.PHONY : ContinuousCoverage
+
+# fast build rule for target.
+ContinuousCoverage/fast:
+	$(MAKE) -f CMakeFiles/ContinuousCoverage.dir/build.make CMakeFiles/ContinuousCoverage.dir/build
+.PHONY : ContinuousCoverage/fast
+
+#=============================================================================
+# Target rules for targets named NightlyStart
+
+# Build rule for target.
+NightlyStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyStart
+.PHONY : NightlyStart
+
+# fast build rule for target.
+NightlyStart/fast:
+	$(MAKE) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/build
+.PHONY : NightlyStart/fast
+
+#=============================================================================
+# Target rules for targets named NightlyTest
+
+# Build rule for target.
+NightlyTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyTest
+.PHONY : NightlyTest
+
+# fast build rule for target.
+NightlyTest/fast:
+	$(MAKE) -f CMakeFiles/NightlyTest.dir/build.make CMakeFiles/NightlyTest.dir/build
+.PHONY : NightlyTest/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalStart
+
+# Build rule for target.
+ExperimentalStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalStart
+.PHONY : ExperimentalStart
+
+# fast build rule for target.
+ExperimentalStart/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalStart.dir/build.make CMakeFiles/ExperimentalStart.dir/build
+.PHONY : ExperimentalStart/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousTest
+
+# Build rule for target.
+ContinuousTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousTest
+.PHONY : ContinuousTest
+
+# fast build rule for target.
+ContinuousTest/fast:
+	$(MAKE) -f CMakeFiles/ContinuousTest.dir/build.make CMakeFiles/ContinuousTest.dir/build
+.PHONY : ContinuousTest/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousConfigure
+
+# Build rule for target.
+ContinuousConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousConfigure
+.PHONY : ContinuousConfigure
+
+# fast build rule for target.
+ContinuousConfigure/fast:
+	$(MAKE) -f CMakeFiles/ContinuousConfigure.dir/build.make CMakeFiles/ContinuousConfigure.dir/build
+.PHONY : ContinuousConfigure/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemCheck
+
+# Build rule for target.
+NightlyMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemCheck
+.PHONY : NightlyMemCheck
+
+# fast build rule for target.
+NightlyMemCheck/fast:
+	$(MAKE) -f CMakeFiles/NightlyMemCheck.dir/build.make CMakeFiles/NightlyMemCheck.dir/build
+.PHONY : NightlyMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalTest
+
+# Build rule for target.
+ExperimentalTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalTest
+.PHONY : ExperimentalTest
+
+# fast build rule for target.
+ExperimentalTest/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
+.PHONY : ExperimentalTest/fast
+
+#=============================================================================
+# Target rules for targets named NightlySubmit
+
+# Build rule for target.
+NightlySubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlySubmit
+.PHONY : NightlySubmit
+
+# fast build rule for target.
+NightlySubmit/fast:
+	$(MAKE) -f CMakeFiles/NightlySubmit.dir/build.make CMakeFiles/NightlySubmit.dir/build
+.PHONY : NightlySubmit/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalConfigure
+
+# Build rule for target.
+ExperimentalConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalConfigure
+.PHONY : ExperimentalConfigure
+
+# fast build rule for target.
+ExperimentalConfigure/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalConfigure.dir/build.make CMakeFiles/ExperimentalConfigure.dir/build
+.PHONY : ExperimentalConfigure/fast
+
+#=============================================================================
 # Target rules for targets named Application
 
 # Build rule for target.
@@ -146,6 +497,19 @@ Application: cmake_check_build_system
 Application/fast:
 	$(MAKE) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/build
 .PHONY : Application/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalUpdate
+
+# Build rule for target.
+ExperimentalUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalUpdate
+.PHONY : ExperimentalUpdate
+
+# fast build rule for target.
+ExperimentalUpdate/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalUpdate.dir/build.make CMakeFiles/ExperimentalUpdate.dir/build
+.PHONY : ExperimentalUpdate/fast
 
 #=============================================================================
 # Target rules for targets named docs
@@ -170,7 +534,7 @@ Test_VCUWheelSpeedFrameProcess: cmake_check_build_system
 
 # fast build rule for target.
 Test_VCUWheelSpeedFrameProcess/fast:
-	$(MAKE) -f Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build.make Test/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build
+	$(MAKE) -f Testing/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build.make Testing/CMakeFiles/Test_VCUWheelSpeedFrameProcess.dir/build
 .PHONY : Test_VCUWheelSpeedFrameProcess/fast
 
 #=============================================================================
@@ -183,7 +547,7 @@ Test_RearTorqueLimit: cmake_check_build_system
 
 # fast build rule for target.
 Test_RearTorqueLimit/fast:
-	$(MAKE) -f Test/CMakeFiles/Test_RearTorqueLimit.dir/build.make Test/CMakeFiles/Test_RearTorqueLimit.dir/build
+	$(MAKE) -f Testing/CMakeFiles/Test_RearTorqueLimit.dir/build.make Testing/CMakeFiles/Test_RearTorqueLimit.dir/build
 .PHONY : Test_RearTorqueLimit/fast
 
 #=============================================================================
@@ -196,7 +560,7 @@ Test_RearCurrentCalculation: cmake_check_build_system
 
 # fast build rule for target.
 Test_RearCurrentCalculation/fast:
-	$(MAKE) -f Test/CMakeFiles/Test_RearCurrentCalculation.dir/build.make Test/CMakeFiles/Test_RearCurrentCalculation.dir/build
+	$(MAKE) -f Testing/CMakeFiles/Test_RearCurrentCalculation.dir/build.make Testing/CMakeFiles/Test_RearCurrentCalculation.dir/build
 .PHONY : Test_RearCurrentCalculation/fast
 
 #=============================================================================
@@ -209,7 +573,7 @@ Test_MotorCurrentFrameProcess: cmake_check_build_system
 
 # fast build rule for target.
 Test_MotorCurrentFrameProcess/fast:
-	$(MAKE) -f Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build.make Test/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build
+	$(MAKE) -f Testing/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build.make Testing/CMakeFiles/Test_MotorCurrentFrameProcess.dir/build
 .PHONY : Test_MotorCurrentFrameProcess/fast
 
 #=============================================================================
@@ -222,7 +586,7 @@ Test_BatteryFrameProcessing: cmake_check_build_system
 
 # fast build rule for target.
 Test_BatteryFrameProcessing/fast:
-	$(MAKE) -f Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build.make Test/CMakeFiles/Test_BatteryFrameProcessing.dir/build
+	$(MAKE) -f Testing/CMakeFiles/Test_BatteryFrameProcessing.dir/build.make Testing/CMakeFiles/Test_BatteryFrameProcessing.dir/build
 .PHONY : Test_BatteryFrameProcessing/fast
 
 #=============================================================================
@@ -235,7 +599,7 @@ Test_DriveRequestFrameProcessing: cmake_check_build_system
 
 # fast build rule for target.
 Test_DriveRequestFrameProcessing/fast:
-	$(MAKE) -f Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build.make Test/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build
+	$(MAKE) -f Testing/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build.make Testing/CMakeFiles/Test_DriveRequestFrameProcessing.dir/build
 .PHONY : Test_DriveRequestFrameProcessing/fast
 
 #=============================================================================
@@ -248,7 +612,7 @@ Test_GenerateCANFrame: cmake_check_build_system
 
 # fast build rule for target.
 Test_GenerateCANFrame/fast:
-	$(MAKE) -f Test/CMakeFiles/Test_GenerateCANFrame.dir/build.make Test/CMakeFiles/Test_GenerateCANFrame.dir/build
+	$(MAKE) -f Testing/CMakeFiles/Test_GenerateCANFrame.dir/build.make Testing/CMakeFiles/Test_GenerateCANFrame.dir/build
 .PHONY : Test_GenerateCANFrame/fast
 
 #=============================================================================
@@ -261,7 +625,7 @@ Test_FrontCurrentCalculation: cmake_check_build_system
 
 # fast build rule for target.
 Test_FrontCurrentCalculation/fast:
-	$(MAKE) -f Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build.make Test/CMakeFiles/Test_FrontCurrentCalculation.dir/build
+	$(MAKE) -f Testing/CMakeFiles/Test_FrontCurrentCalculation.dir/build.make Testing/CMakeFiles/Test_FrontCurrentCalculation.dir/build
 .PHONY : Test_FrontCurrentCalculation/fast
 
 #=============================================================================
@@ -274,7 +638,7 @@ Test_FrontTorqueLimit: cmake_check_build_system
 
 # fast build rule for target.
 Test_FrontTorqueLimit/fast:
-	$(MAKE) -f Test/CMakeFiles/Test_FrontTorqueLimit.dir/build.make Test/CMakeFiles/Test_FrontTorqueLimit.dir/build
+	$(MAKE) -f Testing/CMakeFiles/Test_FrontTorqueLimit.dir/build.make Testing/CMakeFiles/Test_FrontTorqueLimit.dir/build
 .PHONY : Test_FrontTorqueLimit/fast
 
 Src/Application.o: Src/Application.c.o
@@ -337,11 +701,39 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... ContinuousSubmit"
+	@echo "... ContinuousBuild"
+	@echo "... ExperimentalSubmit"
+	@echo "... ContinuousStart"
+	@echo "... ExperimentalMemCheck"
+	@echo "... ExperimentalCoverage"
+	@echo "... NightlyMemoryCheck"
+	@echo "... NightlyCoverage"
+	@echo "... ContinuousUpdate"
+	@echo "... Continuous"
+	@echo "... Experimental"
 	@echo "... rebuild_cache"
+	@echo "... NightlyBuild"
+	@echo "... NightlyConfigure"
 	@echo "... candata"
+	@echo "... Nightly"
+	@echo "... ContinuousMemCheck"
+	@echo "... ExperimentalBuild"
+	@echo "... NightlyUpdate"
+	@echo "... ContinuousCoverage"
+	@echo "... NightlyStart"
+	@echo "... NightlyTest"
+	@echo "... ExperimentalStart"
+	@echo "... ContinuousTest"
+	@echo "... ContinuousConfigure"
+	@echo "... NightlyMemCheck"
+	@echo "... ExperimentalTest"
+	@echo "... NightlySubmit"
+	@echo "... edit_cache"
+	@echo "... ExperimentalConfigure"
 	@echo "... Application"
+	@echo "... ExperimentalUpdate"
 	@echo "... docs"
 	@echo "... Test_VCUWheelSpeedFrameProcess"
 	@echo "... Test_RearTorqueLimit"

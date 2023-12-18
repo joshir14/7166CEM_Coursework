@@ -1,193 +1,182 @@
-Start testing: Dec 18 00:48 IST
+Start testing: Dec 18 16:23 IST
 ----------------------------------------------------------
 1/9 Testing: Test_BatteryFrameProcessing
 1/9 Test: Test_BatteryFrameProcessing
-Command: "/home/pi/Desktop/7166CEM/Test/bin/Test_BatteryFrameProcessing"
-Directory: /home/pi/Desktop/7166CEM/Test
-"Test_BatteryFrameProcessing" start time: Dec 18 00:48 IST
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_BatteryFrameProcessing"
+Directory: /home/pi/Desktop/7166CEM/Testing
+"Test_BatteryFrameProcessing" start time: Dec 18 16:23 IST
 Output:
 ----------------------------------------------------------
 Verify that battery voltage is decoded correctly
 Verify that return status is 0
-/home/pi/Desktop/7166CEM/Test/Test_BatteryFrameProcessing.c:32:test_vcu_battery_frame_process:PASS
 
 -----------------------
-1 Tests 0 Failures 0 Ignored 
+0 Tests 0 Failures 0 Ignored 
 OK
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_BatteryFrameProcessing" end time: Dec 18 00:48 IST
+"Test_BatteryFrameProcessing" end time: Dec 18 16:23 IST
 "Test_BatteryFrameProcessing" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 2/9 Testing: Test_DriveRequestFrameProcessing
 2/9 Test: Test_DriveRequestFrameProcessing
-Command: "/home/pi/Desktop/7166CEM/Test/bin/Test_DriveRequestFrameProcessing"
-Directory: /home/pi/Desktop/7166CEM/Test
-"Test_DriveRequestFrameProcessing" start time: Dec 18 00:48 IST
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_DriveRequestFrameProcessing"
+Directory: /home/pi/Desktop/7166CEM/Testing
+"Test_DriveRequestFrameProcessing" start time: Dec 18 16:23 IST
 Output:
 ----------------------------------------------------------
-Verify that torque requests are decoded correctly
-/home/pi/Desktop/7166CEM/Test/Test_DriveRequestFrameProcessing.c:38:test_ai_drive_request_frame_process:PASS
 
 -----------------------
-1 Tests 0 Failures 0 Ignored 
+0 Tests 0 Failures 0 Ignored 
 OK
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_DriveRequestFrameProcessing" end time: Dec 18 00:48 IST
+"Test_DriveRequestFrameProcessing" end time: Dec 18 16:23 IST
 "Test_DriveRequestFrameProcessing" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 3/9 Testing: Test_FrontCurrentCalculation
 3/9 Test: Test_FrontCurrentCalculation
-Command: "/home/pi/Desktop/7166CEM/Test/bin/Test_FrontCurrentCalculation"
-Directory: /home/pi/Desktop/7166CEM/Test
-"Test_FrontCurrentCalculation" start time: Dec 18 00:48 IST
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_FrontCurrentCalculation"
+Directory: /home/pi/Desktop/7166CEM/Testing
+"Test_FrontCurrentCalculation" start time: Dec 18 16:23 IST
 Output:
 ----------------------------------------------------------
 Verify that front current is calculated correctly
-/home/pi/Desktop/7166CEM/Test/Test_FrontCurrentCalculation.c:29:test_calculate_front_current:PASS
 
 -----------------------
-1 Tests 0 Failures 0 Ignored 
+0 Tests 0 Failures 0 Ignored 
 OK
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_FrontCurrentCalculation" end time: Dec 18 00:48 IST
+"Test_FrontCurrentCalculation" end time: Dec 18 16:23 IST
 "Test_FrontCurrentCalculation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 4/9 Testing: Test_FrontTorqueLimit
 4/9 Test: Test_FrontTorqueLimit
-Command: "/home/pi/Desktop/7166CEM/Test/bin/Test_FrontTorqueLimit"
-Directory: /home/pi/Desktop/7166CEM/Test
-"Test_FrontTorqueLimit" start time: Dec 18 00:48 IST
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_FrontTorqueLimit"
+Directory: /home/pi/Desktop/7166CEM/Testing
+"Test_FrontTorqueLimit" start time: Dec 18 16:23 IST
 Output:
 ----------------------------------------------------------
 Verify that torque limit is correctly applied for front wheels
-/home/pi/Desktop/7166CEM/Test/Test_FrontTorqueLimit.c:39:test_torque_limit_front:PASS
 
 -----------------------
-1 Tests 0 Failures 0 Ignored 
+0 Tests 0 Failures 0 Ignored 
 OK
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_FrontTorqueLimit" end time: Dec 18 00:48 IST
+"Test_FrontTorqueLimit" end time: Dec 18 16:23 IST
 "Test_FrontTorqueLimit" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 5/9 Testing: Test_GenerateCANFrame
 5/9 Test: Test_GenerateCANFrame
-Command: "/home/pi/Desktop/7166CEM/Test/bin/Test_GenerateCANFrame"
-Directory: /home/pi/Desktop/7166CEM/Test
-"Test_GenerateCANFrame" start time: Dec 18 00:48 IST
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_GenerateCANFrame"
+Directory: /home/pi/Desktop/7166CEM/Testing
+"Test_GenerateCANFrame" start time: Dec 18 16:23 IST
 Output:
 ----------------------------------------------------------
 Verify that CAN frame is correctly generated
-/home/pi/Desktop/7166CEM/Test/Test_GenerateCANFrame.c:37:test_generate_can_frame:PASS
 
 -----------------------
-1 Tests 0 Failures 0 Ignored 
+0 Tests 0 Failures 0 Ignored 
 OK
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_GenerateCANFrame" end time: Dec 18 00:48 IST
+"Test_GenerateCANFrame" end time: Dec 18 16:23 IST
 "Test_GenerateCANFrame" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 6/9 Testing: Test_MotorCurrentFrameProcess
 6/9 Test: Test_MotorCurrentFrameProcess
-Command: "/home/pi/Desktop/7166CEM/Test/bin/Test_MotorCurrentFrameProcess"
-Directory: /home/pi/Desktop/7166CEM/Test
-"Test_MotorCurrentFrameProcess" start time: Dec 18 00:48 IST
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_MotorCurrentFrameProcess"
+Directory: /home/pi/Desktop/7166CEM/Testing
+"Test_MotorCurrentFrameProcess" start time: Dec 18 16:23 IST
 Output:
 ----------------------------------------------------------
 Verify that CAN frame for MOTOR_CURRENT (0x320) message is generated correctly
-/home/pi/Desktop/7166CEM/Test/Test_MotorCurrentFrameProcess.c:30:test_process_motor_current_request:PASS
 
 -----------------------
-1 Tests 0 Failures 0 Ignored 
-OK
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Passed.
-"Test_MotorCurrentFrameProcess" end time: Dec 18 00:48 IST
-"Test_MotorCurrentFrameProcess" time elapsed: 00:00:00
-----------------------------------------------------------
-
-7/9 Testing: Test_RearCurrentCalculation
-7/9 Test: Test_RearCurrentCalculation
-Command: "/home/pi/Desktop/7166CEM/Test/bin/Test_RearCurrentCalculation"
-Directory: /home/pi/Desktop/7166CEM/Test
-"Test_RearCurrentCalculation" start time: Dec 18 00:48 IST
-Output:
-----------------------------------------------------------
-Verify that rear current is calculated correctly
-/home/pi/Desktop/7166CEM/Test/Test_RearCurrentCalculation.c:29:test_calculate_rear_current:PASS
-
------------------------
-1 Tests 0 Failures 0 Ignored 
-OK
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Passed.
-"Test_RearCurrentCalculation" end time: Dec 18 00:48 IST
-"Test_RearCurrentCalculation" time elapsed: 00:00:00
-----------------------------------------------------------
-
-8/9 Testing: Test_RearTorqueLimit
-8/9 Test: Test_RearTorqueLimit
-Command: "/home/pi/Desktop/7166CEM/Test/bin/Test_RearTorqueLimit"
-Directory: /home/pi/Desktop/7166CEM/Test
-"Test_RearTorqueLimit" start time: Dec 18 00:48 IST
-Output:
-----------------------------------------------------------
-Verify that torque limit is correctly applied for rear wheels
-/home/pi/Desktop/7166CEM/Test/Test_RearTorqueLimit.c:40:test_torque_limit_rear:PASS
-
------------------------
-1 Tests 0 Failures 0 Ignored 
-OK
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Passed.
-"Test_RearTorqueLimit" end time: Dec 18 00:48 IST
-"Test_RearTorqueLimit" time elapsed: 00:00:00
-----------------------------------------------------------
-
-9/9 Testing: Test_VCUWheelSpeedFrameProcess
-9/9 Test: Test_VCUWheelSpeedFrameProcess
-Command: "/home/pi/Desktop/7166CEM/Test/bin/Test_VCUWheelSpeedFrameProcess"
-Directory: /home/pi/Desktop/7166CEM/Test
-"Test_VCUWheelSpeedFrameProcess" start time: Dec 18 00:48 IST
-Output:
-----------------------------------------------------------
-Verify that wheel speeds are decoded correctly
-/home/pi/Desktop/7166CEM/Test/Test_VCUWheelSpeedFrameProcess.c:42:test_vcu_wheel_speed_frame_process:PASS
-
------------------------
-1 Tests 0 Failures 0 Ignored 
+0 Tests 0 Failures 0 Ignored 
 OK
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_VCUWheelSpeedFrameProcess" end time: Dec 18 00:48 IST
+"Test_MotorCurrentFrameProcess" end time: Dec 18 16:23 IST
+"Test_MotorCurrentFrameProcess" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/9 Testing: Test_RearCurrentCalculation
+7/9 Test: Test_RearCurrentCalculation
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_RearCurrentCalculation"
+Directory: /home/pi/Desktop/7166CEM/Testing
+"Test_RearCurrentCalculation" start time: Dec 18 16:23 IST
+Output:
+----------------------------------------------------------
+Verify that rear current is calculated correctly
+
+-----------------------
+0 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Test_RearCurrentCalculation" end time: Dec 18 16:23 IST
+"Test_RearCurrentCalculation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/9 Testing: Test_RearTorqueLimit
+8/9 Test: Test_RearTorqueLimit
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_RearTorqueLimit"
+Directory: /home/pi/Desktop/7166CEM/Testing
+"Test_RearTorqueLimit" start time: Dec 18 16:23 IST
+Output:
+----------------------------------------------------------
+
+-----------------------
+0 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Test_RearTorqueLimit" end time: Dec 18 16:23 IST
+"Test_RearTorqueLimit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/9 Testing: Test_VCUWheelSpeedFrameProcess
+9/9 Test: Test_VCUWheelSpeedFrameProcess
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_VCUWheelSpeedFrameProcess"
+Directory: /home/pi/Desktop/7166CEM/Testing
+"Test_VCUWheelSpeedFrameProcess" start time: Dec 18 16:23 IST
+Output:
+----------------------------------------------------------
+Verify that wheel speeds are decoded correctly
+
+-----------------------
+0 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Test_VCUWheelSpeedFrameProcess" end time: Dec 18 16:23 IST
 "Test_VCUWheelSpeedFrameProcess" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 18 00:48 IST
+End testing: Dec 18 16:23 IST

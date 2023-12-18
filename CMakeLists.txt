@@ -5,6 +5,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 
 project(Application C)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wvla -Werror=vla")
+
 file( MAKE_DIRECTORY Src_autogen )  
 add_custom_command( OUTPUT Src_autogen/candata.h Src_autogen/candata.c
         COMMAND python3 -m cantools generate_c_source candata.dbc -o Src_autogen
@@ -29,8 +31,9 @@ target_include_directories( candata PUBLIC Src_autogen )
 add_executable( Application Src/Application.c )
 target_link_libraries( Application PUBLIC candata )
 
+include(CTest)
 enable_testing() 
-add_subdirectory(Test)
+add_subdirectory(Testing)
 
 
 
