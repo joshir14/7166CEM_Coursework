@@ -1,10 +1,10 @@
-Start testing: Dec 19 00:59 IST
+Start testing: Dec 19 19:47 IST
 ----------------------------------------------------------
 1/9 Testing: Test_BatteryFrameProcessing
 1/9 Test: Test_BatteryFrameProcessing
 Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_BatteryFrameProcessing"
 Directory: /home/pi/Desktop/7166CEM/Testing
-"Test_BatteryFrameProcessing" start time: Dec 19 00:59 IST
+"Test_BatteryFrameProcessing" start time: Dec 19 19:47 IST
 Output:
 ----------------------------------------------------------
 
@@ -12,10 +12,10 @@ Output:
 0 Tests 0 Failures 0 Ignored 
 OK
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_BatteryFrameProcessing" end time: Dec 19 00:59 IST
+"Test_BatteryFrameProcessing" end time: Dec 19 19:47 IST
 "Test_BatteryFrameProcessing" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -23,7 +23,7 @@ Test Passed.
 2/9 Test: Test_DriveRequestFrameProcessing
 Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_DriveRequestFrameProcessing"
 Directory: /home/pi/Desktop/7166CEM/Testing
-"Test_DriveRequestFrameProcessing" start time: Dec 19 00:59 IST
+"Test_DriveRequestFrameProcessing" start time: Dec 19 19:47 IST
 Output:
 ----------------------------------------------------------
 
@@ -31,10 +31,10 @@ Output:
 0 Tests 0 Failures 0 Ignored 
 OK
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_DriveRequestFrameProcessing" end time: Dec 19 00:59 IST
+"Test_DriveRequestFrameProcessing" end time: Dec 19 19:47 IST
 "Test_DriveRequestFrameProcessing" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -42,7 +42,7 @@ Test Passed.
 3/9 Test: Test_FrontCurrentCalculation
 Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_FrontCurrentCalculation"
 Directory: /home/pi/Desktop/7166CEM/Testing
-"Test_FrontCurrentCalculation" start time: Dec 19 00:59 IST
+"Test_FrontCurrentCalculation" start time: Dec 19 19:47 IST
 Output:
 ----------------------------------------------------------
 
@@ -53,7 +53,7 @@ OK
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_FrontCurrentCalculation" end time: Dec 19 00:59 IST
+"Test_FrontCurrentCalculation" end time: Dec 19 19:47 IST
 "Test_FrontCurrentCalculation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -61,7 +61,7 @@ Test Passed.
 4/9 Test: Test_FrontTorqueLimit
 Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_FrontTorqueLimit"
 Directory: /home/pi/Desktop/7166CEM/Testing
-"Test_FrontTorqueLimit" start time: Dec 19 00:59 IST
+"Test_FrontTorqueLimit" start time: Dec 19 19:47 IST
 Output:
 ----------------------------------------------------------
 
@@ -69,10 +69,10 @@ Output:
 0 Tests 0 Failures 0 Ignored 
 OK
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_FrontTorqueLimit" end time: Dec 19 00:59 IST
+"Test_FrontTorqueLimit" end time: Dec 19 19:47 IST
 "Test_FrontTorqueLimit" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -80,7 +80,7 @@ Test Passed.
 5/9 Test: Test_GenerateCANFrame
 Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_GenerateCANFrame"
 Directory: /home/pi/Desktop/7166CEM/Testing
-"Test_GenerateCANFrame" start time: Dec 19 00:59 IST
+"Test_GenerateCANFrame" start time: Dec 19 19:47 IST
 Output:
 ----------------------------------------------------------
 
@@ -91,7 +91,7 @@ OK
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_GenerateCANFrame" end time: Dec 19 00:59 IST
+"Test_GenerateCANFrame" end time: Dec 19 19:47 IST
 "Test_GenerateCANFrame" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -99,7 +99,7 @@ Test Passed.
 6/9 Test: Test_MotorCurrentFrameProcess
 Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_MotorCurrentFrameProcess"
 Directory: /home/pi/Desktop/7166CEM/Testing
-"Test_MotorCurrentFrameProcess" start time: Dec 19 00:59 IST
+"Test_MotorCurrentFrameProcess" start time: Dec 19 19:47 IST
 Output:
 ----------------------------------------------------------
 
@@ -110,7 +110,7 @@ OK
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_MotorCurrentFrameProcess" end time: Dec 19 00:59 IST
+"Test_MotorCurrentFrameProcess" end time: Dec 19 19:47 IST
 "Test_MotorCurrentFrameProcess" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -118,26 +118,7 @@ Test Passed.
 7/9 Test: Test_RearCurrentCalculation
 Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_RearCurrentCalculation"
 Directory: /home/pi/Desktop/7166CEM/Testing
-"Test_RearCurrentCalculation" start time: Dec 19 00:59 IST
-Output:
-----------------------------------------------------------
-
------------------------
-0 Tests 0 Failures 0 Ignored 
-OK
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Passed.
-"Test_RearCurrentCalculation" end time: Dec 19 00:59 IST
-"Test_RearCurrentCalculation" time elapsed: 00:00:00
-----------------------------------------------------------
-
-8/9 Testing: Test_RearTorqueLimit
-8/9 Test: Test_RearTorqueLimit
-Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_RearTorqueLimit"
-Directory: /home/pi/Desktop/7166CEM/Testing
-"Test_RearTorqueLimit" start time: Dec 19 00:59 IST
+"Test_RearCurrentCalculation" start time: Dec 19 19:47 IST
 Output:
 ----------------------------------------------------------
 
@@ -148,15 +129,15 @@ OK
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_RearTorqueLimit" end time: Dec 19 00:59 IST
-"Test_RearTorqueLimit" time elapsed: 00:00:00
+"Test_RearCurrentCalculation" end time: Dec 19 19:47 IST
+"Test_RearCurrentCalculation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-9/9 Testing: Test_VCUWheelSpeedFrameProcess
-9/9 Test: Test_VCUWheelSpeedFrameProcess
-Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_VCUWheelSpeedFrameProcess"
+8/9 Testing: Test_RearTorqueLimit
+8/9 Test: Test_RearTorqueLimit
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_RearTorqueLimit"
 Directory: /home/pi/Desktop/7166CEM/Testing
-"Test_VCUWheelSpeedFrameProcess" start time: Dec 19 00:59 IST
+"Test_RearTorqueLimit" start time: Dec 19 19:47 IST
 Output:
 ----------------------------------------------------------
 
@@ -164,11 +145,30 @@ Output:
 0 Tests 0 Failures 0 Ignored 
 OK
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_VCUWheelSpeedFrameProcess" end time: Dec 19 00:59 IST
+"Test_RearTorqueLimit" end time: Dec 19 19:47 IST
+"Test_RearTorqueLimit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/9 Testing: Test_VCUWheelSpeedFrameProcess
+9/9 Test: Test_VCUWheelSpeedFrameProcess
+Command: "/home/pi/Desktop/7166CEM/Testing/bin/Test_VCUWheelSpeedFrameProcess"
+Directory: /home/pi/Desktop/7166CEM/Testing
+"Test_VCUWheelSpeedFrameProcess" start time: Dec 19 19:47 IST
+Output:
+----------------------------------------------------------
+
+-----------------------
+0 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Test_VCUWheelSpeedFrameProcess" end time: Dec 19 19:47 IST
 "Test_VCUWheelSpeedFrameProcess" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 19 00:59 IST
+End testing: Dec 19 19:47 IST

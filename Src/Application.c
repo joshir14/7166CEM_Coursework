@@ -33,8 +33,7 @@ int main()
 	count2 = 0;
 	count3 = 0;
 	while (1) {
-		int status = can_read(socket_id, &frame);
-		if (status == 1) {
+		if (can_read(socket_id, &frame) == 1) {
 			if ((frame.can_id == 0x526) && (frame.can_dlc > 0)) {
 				count1 = count1 + 1;
 				vcu_battery_frame_process(frame, &batteryVoltage);
@@ -74,9 +73,10 @@ int main()
 				printf("Rear current %f\n", cr1);
 				dlc = process_motor_current_request(cf1, cr1, currentDataBuffer);
 
-				generate_can_frame(&TxFrame, currentDataBuffer, 0x320, dlc);
-				if (!can_write(socket_id, &TxFrame)) {
-					printf("Error\n");
+				if (generate_can_frame(&TxFrame, currentDataBuffer, 0x320, dlc) == 1) {
+					if (!can_write(socket_id, &TxFrame)) {
+						printf("Error\n");
+					}
 				}
 				count2 = 0;
 			}
